@@ -6,1034 +6,1066 @@
 
 <title>NÓS RESOLVEMOS 100% DO QUE PROCURAS</title>
 
-<meta name="description" content="Tu procuras. Nós encontramos. Pesquisamos empregos, cursos, empresas, documentos, negócios e outras informações em Angola.">
-<meta name="theme-color" content="#063b2a">
+<meta name="description" content="Pesquisaste. Nós encontramos. Encontre empregos, cursos, empresas, serviços, documentos, negócios e outras soluções em Angola.">
+<meta name="theme-color" content="#07140d">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --verde:#00ff66;
+  --verde2:#00c853;
+  --fundo:#07100b;
+  --fundo2:#0c1711;
+  --card:#101d15;
+  --card2:#14251b;
+  --texto:#f4fff7;
+  --cinza:#aab8af;
+  --borda:rgba(0,255,102,.18);
+  --perigo:#ff5757;
+  --amarelo:#ffd166;
+}
 
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#06110c;
-color:#fff;
-line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at top right,rgba(0,255,102,.10),transparent 35%),
+    radial-gradient(circle at bottom left,rgba(0,200,83,.08),transparent 30%),
+    var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
 }
 
-a{text-decoration:none;color:inherit}
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(3,24,16,.98);
-border-bottom:1px solid #18a45b;
-padding:14px;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.logo{
-text-align:center;
-font-size:20px;
-font-weight:900;
-color:#20e878;
-}
-
-.logo small{
-display:block;
-color:#fff;
-font-size:11px;
-font-weight:normal;
-}
-
-nav{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:6px;
-margin-top:11px;
-}
-
-nav a{
-padding:7px 10px;
-border:1px solid #176e48;
-border-radius:20px;
-font-size:12px;
-background:#0b271c;
-}
-
-nav a:hover{background:#159447}
-
-.hero{
-padding:70px 18px;
-text-align:center;
-background:radial-gradient(circle at top,#0b573b 0,#06110c 60%);
-}
-
-.hero h1{
-font-size:clamp(34px,9vw,62px);
-line-height:1.03;
-color:#20e878;
-margin-bottom:18px;
-}
-
-.hero p{
-max-width:720px;
-margin:auto;
-font-size:18px;
-color:#d5e7de;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:25px;
-}
-
-.btn{
-display:inline-block;
-padding:13px 19px;
-border-radius:30px;
-font-weight:bold;
-border:1px solid #20e878;
-cursor:pointer;
-}
-
-.btn-primary{
-background:#20e878;
-color:#03140d;
-}
-
-.btn-secondary{
-background:#0b251a;
-color:#fff;
-}
-
-section{
-max-width:1100px;
-margin:auto;
-padding:55px 16px;
-}
-
-.section-title{
-text-align:center;
-font-size:30px;
-color:#20e878;
-margin-bottom:8px;
-}
-
-.section-subtitle{
-text-align:center;
-color:#b9ccc3;
-margin-bottom:28px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:17px;
-}
-
-.card{
-background:#0b1f17;
-border:1px solid #155d40;
-border-radius:17px;
-padding:22px;
-transition:.2s;
-}
-
-.card:hover{
-transform:translateY(-3px);
-border-color:#20e878;
-}
-
-.icon{
-font-size:36px;
-margin-bottom:7px;
-}
-
-.card h3{
-color:#20e878;
-margin-bottom:7px;
-}
-
-.card p{
-color:#c7d8d0;
-font-size:14px;
-margin-bottom:15px;
-}
-
-.service-btn{
-display:inline-block;
-background:#20e878;
-color:#03140d;
-padding:9px 14px;
-border-radius:20px;
-font-size:13px;
-font-weight:bold;
-}
-
-.steps{
-display:grid;
-gap:14px;
-}
-
-.step{
-background:#0b1f17;
-border:1px solid #155d40;
-border-radius:15px;
-padding:20px;
-}
-
-.step strong{
-color:#20e878;
-font-size:18px;
-}
-
-.form-box{
-max-width:680px;
-margin:auto;
-background:#0b1f17;
-border:1px solid #176e48;
-border-radius:18px;
-padding:24px;
-}
-
-label{
-display:block;
-margin-top:14px;
-margin-bottom:6px;
-font-weight:bold;
-}
-
-input,select,textarea{
-width:100%;
-padding:13px;
-border-radius:9px;
-border:1px solid #286b4d;
-background:#06130e;
-color:#fff;
-font-size:15px;
-}
-
+button,
+input,
+select,
 textarea{
-min-height:130px;
-resize:vertical;
+  font:inherit;
 }
 
 button{
-border:0;
-cursor:pointer;
+  cursor:pointer;
 }
 
-.main-button{
-width:100%;
-margin-top:20px;
-padding:14px;
-border-radius:30px;
-background:#20e878;
-color:#03140d;
-font-weight:bold;
-font-size:16px;
+.container{
+  width:min(1100px,92%);
+  margin:auto;
 }
 
-.main-button:disabled{
-opacity:.6;
-cursor:wait;
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,16,11,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--borda);
 }
+
+.header-inner{
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:19px;
+  font-weight:900;
+  color:var(--verde);
+  letter-spacing:.5px;
+}
+
+.logo small{
+  display:block;
+  color:#fff;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:1px;
+}
+
+nav{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+nav a{
+  padding:8px 10px;
+  border-radius:8px;
+  color:#dce8df;
+  font-size:13px;
+  transition:.2s;
+}
+
+nav a:hover{
+  background:rgba(0,255,102,.10);
+  color:var(--verde);
+}
+
+/* HERO */
+
+.hero{
+  padding:90px 0 70px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid var(--borda);
+  border-radius:30px;
+  color:var(--verde);
+  background:rgba(0,255,102,.05);
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(35px,8vw,68px);
+  line-height:1.05;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero h1 span{
+  color:var(--verde);
+}
+
+.hero p{
+  max-width:720px;
+  margin:22px auto;
+  color:var(--cinza);
+  font-size:17px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  border-radius:10px;
+  padding:13px 20px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--verde);
+  color:#001507;
+}
+
+.btn-secondary{
+  background:#132219;
+  color:#fff;
+  border:1px solid var(--borda);
+}
+
+/* SEÇÕES */
+
+section{
+  padding:70px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+.section-title p{
+  color:var(--cinza);
+}
+
+/* SERVIÇOS */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service{
+  background:linear-gradient(145deg,var(--card),#0b150f);
+  border:1px solid var(--borda);
+  border-radius:16px;
+  padding:25px;
+  transition:.2s;
+}
+
+.service:hover{
+  transform:translateY(-4px);
+  border-color:rgba(0,255,102,.45);
+}
+
+.service .icon{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.service h3{
+  margin-bottom:7px;
+}
+
+.service p{
+  color:var(--cinza);
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.service button{
+  background:transparent;
+  color:var(--verde);
+  border:1px solid var(--borda);
+  padding:9px 13px;
+  border-radius:8px;
+}
+
+/* COMO FUNCIONA */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.step{
+  text-align:center;
+  background:var(--card);
+  border:1px solid var(--borda);
+  padding:20px 13px;
+  border-radius:14px;
+}
+
+.step-number{
+  width:38px;
+  height:38px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  background:var(--verde);
+  color:#001507;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+}
+
+.step p{
+  color:var(--cinza);
+  font-size:13px;
+}
+
+/* FORMULÁRIO */
+
+.request-box{
+  max-width:760px;
+  margin:auto;
+  background:linear-gradient(145deg,var(--card),var(--card2));
+  border:1px solid var(--borda);
+  border-radius:20px;
+  padding:28px;
+  box-shadow:0 20px 70px rgba(0,0,0,.25);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.field{
+  margin-bottom:16px;
+}
+
+.field.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  display:block;
+  margin-bottom:7px;
+  font-size:13px;
+  font-weight:700;
+  color:#dce8df;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.10);
+  background:#08110c;
+  color:#fff;
+  border-radius:10px;
+  padding:13px;
+  outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--verde);
+  box-shadow:0 0 0 3px rgba(0,255,102,.08);
+}
+
+.field textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+.help{
+  font-size:12px;
+  color:#84948a;
+  margin-top:6px;
+}
+
+.submit-btn{
+  width:100%;
+  background:var(--verde);
+  color:#001507;
+  border:none;
+  border-radius:10px;
+  padding:15px;
+  font-size:16px;
+  font-weight:900;
+}
+
+.submit-btn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}
+
+/* RESULTADO */
+
+.status{
+  display:none;
+  margin-top:20px;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid var(--borda);
+  background:#08130d;
+}
+
+.status.show{
+  display:block;
+}
+
+.status.success{
+  border-color:rgba(0,255,102,.4);
+}
+
+.status.error{
+  border-color:rgba(255,87,87,.5);
+}
+
+.status.loading{
+  border-color:rgba(255,209,102,.4);
+}
+
+.status-title{
+  font-weight:900;
+  margin-bottom:7px;
+}
+
+.status-text{
+  color:#cbd8cf;
+  font-size:14px;
+}
+
+.answer{
+  margin-top:15px;
+  background:#050b07;
+  border:1px solid rgba(0,255,102,.18);
+  border-radius:12px;
+  padding:18px;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  color:#f0fff4;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.request-id{
+  margin-top:10px;
+  font-size:12px;
+  color:#7f9186;
+}
+
+/* PAGAMENTO */
 
 .payment{
-text-align:center;
-background:linear-gradient(135deg,#073a28,#0b1f17);
-border:1px solid #20e878;
-border-radius:18px;
-padding:30px 18px;
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+  background:linear-gradient(145deg,#102018,#0a130e);
+  border:1px solid var(--borda);
+  border-radius:18px;
+  padding:30px;
 }
 
-.payment-number{
-font-size:30px;
-font-weight:900;
-color:#20e878;
-margin:12px 0;
+.xpress{
+  font-size:32px;
+  font-weight:900;
+  color:var(--verde);
+  margin:12px 0;
 }
 
-.copy-btn{
-padding:10px 17px;
-border-radius:25px;
-background:#fff;
-color:#063b2a;
-font-weight:bold;
+.payment p{
+  color:var(--cinza);
 }
 
 .warning{
-color:#ffd66b;
-font-size:14px;
-margin-top:14px;
+  margin-top:18px;
+  padding:13px;
+  border-radius:10px;
+  background:rgba(255,209,102,.07);
+  border:1px solid rgba(255,209,102,.25);
+  color:#e9d99e;
+  font-size:13px;
 }
 
-.contact{text-align:center}
-
-.contact-number{
-display:inline-block;
-margin:6px;
-padding:12px 18px;
-border-radius:30px;
-background:#20e878;
-color:#03140d;
-font-weight:bold;
-}
+/* FAQ */
 
 .faq{
-padding:16px 0;
-border-bottom:1px solid #285540;
+  max-width:800px;
+  margin:auto;
 }
 
-.faq strong{
-display:block;
-color:#20e878;
-margin-bottom:5px;
+details{
+  background:var(--card);
+  border:1px solid var(--borda);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:10px;
 }
 
-.notice{
-background:#102a20;
-border-left:4px solid #20e878;
-padding:15px;
-border-radius:8px;
-margin-top:20px;
-color:#d4e4dd;
-font-size:14px;
+summary{
+  cursor:pointer;
+  font-weight:800;
 }
 
-.status-box{
-display:none;
-margin-top:18px;
-padding:15px;
-border-radius:10px;
-font-size:14px;
-text-align:center;
+details p{
+  color:var(--cinza);
+  margin-top:10px;
+  font-size:14px;
 }
 
-.status-success{
-display:block;
-background:#123d28;
-border:1px solid #20e878;
-color:#dffff0;
+/* CONTACTO */
+
+.contact{
+  text-align:center;
 }
 
-.status-error{
-display:block;
-background:#3d1717;
-border:1px solid #ff6666;
-color:#ffe0e0;
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:20px;
 }
+
+/* FOOTER */
 
 footer{
-text-align:center;
-padding:35px 15px;
-background:#03100a;
-color:#9db1a8;
-font-size:13px;
+  border-top:1px solid var(--borda);
+  padding:30px 0;
+  text-align:center;
+  color:#7e8d84;
+  font-size:13px;
 }
 
-.share-box{
-text-align:center;
-margin-top:25px;
-}
-
-.share-btn{
-padding:12px 20px;
-border-radius:25px;
-background:#20e878;
-color:#03140d;
-font-weight:bold;
-}
-
-.top{
-position:fixed;
-right:18px;
-bottom:85px;
-width:45px;
-height:45px;
-border-radius:50%;
-background:#fff;
-color:#063b2a;
-display:none;
-align-items:center;
-justify-content:center;
-font-size:20px;
-z-index:900;
-}
+/* WHATSAPP */
 
 .whatsapp{
-position:fixed;
-right:18px;
-bottom:18px;
-width:58px;
-height:58px;
-border-radius:50%;
-background:#20e878;
-color:#03140d;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:27px;
-z-index:999;
-box-shadow:0 5px 20px #000;
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  z-index:999;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
 }
 
-@media(max-width:600px){
-.hero{padding:55px 15px}
-.hero h1{font-size:38px}
-section{padding:45px 14px}
-.payment-number{font-size:25px}
+/* TOPO */
+
+.top{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#15241a;
+  color:var(--verde);
+  border:1px solid var(--borda);
+  display:none;
+  z-index:999;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:850px){
+  .services{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .step:last-child{
+    grid-column:1/-1;
+  }
+}
+
+@media(max-width:650px){
+  .header-inner{
+    padding:12px 0;
+    align-items:flex-start;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    padding:65px 0 45px;
+  }
+
+  section{
+    padding:50px 0;
+  }
+
+  .services,
+  .steps,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .step:last-child{
+    grid-column:auto;
+  }
+
+  .request-box{
+    padding:20px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
 }
 </style>
 </head>
 
-<body id="top">
+<body>
 
 <header>
-<div class="logo">
-NÓS RESOLVEMOS
-<small>100% DO QUE PROCURAS</small>
-</div>
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">
+      NÓS RESOLVEMOS
+      <small>100% DO QUE PROCURAS</small>
+    </a>
 
-<nav>
-<a href="#top">Início</a>
-<a href="#servicos">Serviços</a>
-<a href="#como">Como funciona</a>
-<a href="#pedir">Pedir ajuda</a>
-<a href="#pagamento">Pagamento</a>
-<a href="#contacto">Contacto</a>
-</nav>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#pedir">Pedir ajuda</a>
+      <a href="#pagamento">Pagamento</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero">
+<!-- INÍCIO -->
+<section id="inicio" class="hero">
+  <div class="container">
 
-<h1>Tu procuras.<br>Nós encontramos.</h1>
+    <div class="badge">🇦🇴 Serviço de pesquisa para Angola</div>
 
-<p>
-Precisas encontrar uma informação, oportunidade, emprego,
-curso, empresa, documento, fornecedor ou solução?
-Nós pesquisamos e ajudamos-te a encontrar.
-</p>
+    <h1>
+      Tu procuras.<br>
+      <span>Nós encontramos.</span>
+    </h1>
 
-<div class="buttons">
-<a class="btn btn-primary" href="#pedir">🔎 PEDIR UMA PESQUISA</a>
-<a class="btn btn-secondary" href="#servicos">VER SERVIÇOS</a>
-</div>
+    <p>
+      Procuramos informações, oportunidades, serviços e soluções
+      para aquilo que precisas — de forma simples e organizada.
+    </p>
 
-<div class="share-box">
-<button class="share-btn" onclick="partilharSite()">📤 PARTILHAR SITE</button>
-</div>
+    <div class="hero-buttons">
+      <a href="#pedir" class="btn btn-primary">
+        🔎 Fazer uma pesquisa
+      </a>
 
+      <a href="#servicos" class="btn btn-secondary">
+        Ver serviços
+      </a>
+    </div>
+
+  </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section id="servicos">
+  <div class="container">
 
-<h2 class="section-title">O que podemos procurar?</h2>
+    <div class="section-title">
+      <h2>O que procuramos?</h2>
+      <p>Escolhe uma categoria ou descreve exatamente o que precisas.</p>
+    </div>
 
-<p class="section-subtitle">
-Escolhe um serviço para iniciar o teu pedido.
-</p>
+    <div class="services">
 
-<div class="grid">
+      <div class="service">
+        <div class="icon">💼</div>
+        <h3>Empregos</h3>
+        <p>
+          Procuramos vagas, concursos e oportunidades de trabalho.
+        </p>
+        <button onclick="servico('Emprego')">
+          Procurar emprego
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">💼</div>
-<h3>Empregos</h3>
-<p>Procuramos oportunidades de emprego e informações sobre candidaturas.</p>
-<a class="service-btn" href="#" onclick="servico('Emprego');return false;">PEDIR PESQUISA</a>
-</div>
+      <div class="service">
+        <div class="icon">🎓</div>
+        <h3>Cursos e formações</h3>
+        <p>
+          Procuramos cursos, bolsas, formações e oportunidades de aprendizagem.
+        </p>
+        <button onclick="servico('Curso ou formação')">
+          Procurar curso
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">🎓</div>
-<h3>Cursos e formações</h3>
-<p>Procuramos cursos, formações, bolsas e oportunidades de aprendizagem.</p>
-<a class="service-btn" href="#" onclick="servico('Curso ou formação');return false;">PEDIR PESQUISA</a>
-</div>
+      <div class="service">
+        <div class="icon">🏢</div>
+        <h3>Empresas e serviços</h3>
+        <p>
+          Encontramos empresas, lojas, serviços e contactos.
+        </p>
+        <button onclick="servico('Empresa ou serviço')">
+          Procurar serviço
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">🏢</div>
-<h3>Empresas e serviços</h3>
-<p>Procuramos empresas, profissionais, lojas e serviços.</p>
-<a class="service-btn" href="#" onclick="servico('Empresa ou serviço');return false;">PEDIR PESQUISA</a>
-</div>
+      <div class="service">
+        <div class="icon">📄</div>
+        <h3>Documentos</h3>
+        <p>
+          Procuramos informações sobre documentos, requisitos e procedimentos.
+        </p>
+        <button onclick="servico('Documento')">
+          Procurar documento
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">📄</div>
-<h3>Documentos</h3>
-<p>Procuramos informações sobre documentos, requisitos e procedimentos.</p>
-<a class="service-btn" href="#" onclick="servico('Documento ou procedimento');return false;">PEDIR PESQUISA</a>
-</div>
+      <div class="service">
+        <div class="icon">💰</div>
+        <h3>Negócios</h3>
+        <p>
+          Procuramos oportunidades de negócio, fornecedores e ideias.
+        </p>
+        <button onclick="servico('Negócio')">
+          Procurar negócio
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">💡</div>
-<h3>Negócios</h3>
-<p>Procuramos fornecedores, oportunidades e informações para negócios.</p>
-<a class="service-btn" href="#" onclick="servico('Negócio ou fornecedor');return false;">PEDIR PESQUISA</a>
-</div>
+      <div class="service">
+        <div class="icon">🔎</div>
+        <h3>Pesquisa personalizada</h3>
+        <p>
+          Tens uma pergunta diferente? Explica e nós pesquisamos.
+        </p>
+        <button onclick="servico('Pesquisa personalizada')">
+          Fazer pesquisa
+        </button>
+      </div>
 
-<div class="card">
-<div class="icon">🔎</div>
-<h3>Pesquisa personalizada</h3>
-<p>Não encontraste a categoria certa? Explica o que procuras.</p>
-<a class="service-btn" href="#" onclick="servico('Pesquisa personalizada');return false;">PEDIR PESQUISA</a>
-</div>
-
-</div>
+    </div>
+  </div>
 </section>
 
+<!-- COMO FUNCIONA -->
 <section id="como">
+  <div class="container">
 
-<h2 class="section-title">Como funciona?</h2>
+    <div class="section-title">
+      <h2>Como funciona?</h2>
+      <p>O processo foi pensado para funcionar mesmo quando não estamos online.</p>
+    </div>
 
-<p class="section-subtitle">
-Um processo simples através do nosso sistema.
-</p>
+    <div class="steps">
 
-<div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Tu pedes</h3>
+        <p>Preenches o formulário com aquilo que procuras.</p>
+      </div>
 
-<div class="step">
-<strong>1. Tu explicas</strong>
-<p>Conta-nos exatamente o que estás a procurar.</p>
-</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Registamos</h3>
+        <p>O pedido é guardado automaticamente.</p>
+      </div>
 
-<div class="step">
-<strong>2. O sistema recebe</strong>
-<p>O teu pedido é registado automaticamente no nosso sistema.</p>
-</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>A IA pesquisa</h3>
+        <p>O sistema pesquisa informações relevantes na internet.</p>
+      </div>
 
-<div class="step">
-<strong>3. Analisamos</strong>
-<p>Verificamos o pedido e informamos o que podemos fazer.</p>
-</div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Recebes a resposta</h3>
+        <p>A resposta aparece automaticamente no site.</p>
+      </div>
 
-<div class="step">
-<strong>4. Fazemos a pesquisa</strong>
-<p>Procuramos informações relevantes para o teu pedido.</p>
-</div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <h3>Confirmas</h3>
+        <p>Quando necessário, confirmas os detalhes diretamente com a entidade.</p>
+      </div>
 
-<div class="step">
-<strong>5. Recebes os resultados</strong>
-<p>Os resultados serão enviados pelo canal combinado.</p>
-</div>
+    </div>
 
-</div>
-
-<div class="notice">
-<strong>Importante:</strong>
-as informações encontradas devem ser verificadas pelo cliente
-antes de qualquer decisão, contratação ou pagamento a terceiros.
-</div>
-
+  </div>
 </section>
 
+<!-- PEDIR -->
 <section id="pedir">
+  <div class="container">
 
-<h2 class="section-title">Pedir uma pesquisa</h2>
+    <div class="section-title">
+      <h2>Faz o teu pedido</h2>
+      <p>
+        Quanto mais detalhes forneceres, mais específica poderá ser a pesquisa.
+      </p>
+    </div>
 
-<p class="section-subtitle">
-Preenche os dados e envia o pedido para o nosso sistema.
-</p>
+    <div class="request-box">
 
-<div class="form-box">
+      <form id="pedidoForm">
 
-<label for="nome">Teu nome</label>
-<input id="nome" type="text" placeholder="Ex.: João">
+        <div class="form-grid">
 
-<label for="telefone">Teu número de WhatsApp</label>
-<input id="telefone" type="tel" placeholder="Ex.: 949 000 000">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              placeholder="O teu nome"
+              maxlength="100"
+              autocomplete="name"
+              required
+            >
+          </div>
 
-<label for="categoria">Tipo de pesquisa</label>
+          <div class="field">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input
+              id="telefone"
+              name="telefone"
+              type="tel"
+              placeholder="Ex.: 949623013"
+              maxlength="30"
+              autocomplete="tel"
+              required
+            >
+          </div>
 
-<select id="categoria">
-<option value="">Seleciona uma categoria</option>
-<option>Emprego</option>
-<option>Curso ou formação</option>
-<option>Empresa ou serviço</option>
-<option>Documento ou procedimento</option>
-<option>Negócio ou fornecedor</option>
-<option>Pesquisa personalizada</option>
-</select>
+          <div class="field">
+            <label for="categoria">O que procuras?</label>
 
-<label for="local">Local / Província</label>
-<input id="local" type="text" placeholder="Ex.: Luanda, Bié, Benguela...">
+            <select id="categoria" name="categoria" required>
+              <option value="">Seleciona uma categoria</option>
+              <option value="Emprego">💼 Emprego</option>
+              <option value="Curso ou formação">🎓 Curso ou formação</option>
+              <option value="Empresa ou serviço">🏢 Empresa ou serviço</option>
+              <option value="Documento">📄 Documento</option>
+              <option value="Negócio">💰 Negócio</option>
+              <option value="Pesquisa personalizada">🔎 Pesquisa personalizada</option>
+              <option value="Outro">📌 Outro</option>
+            </select>
+          </div>
 
-<label for="pedido">Explica o que procuras</label>
+          <div class="field">
+            <label for="local">Localização</label>
 
-<textarea id="pedido" placeholder="Escreve aqui todos os detalhes possíveis..."></textarea>
+            <input
+              id="local"
+              name="local"
+              type="text"
+              placeholder="Província / cidade / país"
+              maxlength="100"
+              autocomplete="address-level1"
+            >
+          </div>
 
-<button id="enviarBtn" class="main-button" onclick="enviarPedido()">
-📲 ENVIAR PEDIDO
-</button>
+          <div class="field full">
+            <label for="pedido">O que exatamente procuras?</label>
 
-<div id="statusBox" class="status-box"></div>
+            <textarea
+              id="pedido"
+              name="pedido"
+              placeholder="Ex.: Procuro cursos de soldadura disponíveis no Bié, presenciais ou online, com contactos e preço se estiver disponível."
+              maxlength="3000"
+              required
+            ></textarea>
 
-</div>
+            <div class="help">
+              Escreve todos os detalhes que souberes. Não coloques palavras-passe ou dados bancários.
+            </div>
+          </div>
 
+        </div>
+
+        <!-- CAMPO ANTI-SPAM -->
+        <input
+          type="text"
+          id="website"
+          name="website"
+          autocomplete="off"
+          tabindex="-1"
+          style="position:absolute;left:-9999px;opacity:0;"
+          aria-hidden="true"
+        >
+
+        <button
+          type="submit"
+          id="enviarBtn"
+          class="submit-btn"
+        >
+          🔎 ENVIAR PEDIDO E PESQUISAR
+        </button>
+
+      </form>
+
+      <div id="statusBox" class="status">
+        <div id="statusTitle" class="status-title"></div>
+        <div id="statusText" class="status-text"></div>
+
+        <div
+          id="aiAnswer"
+          class="answer"
+          style="display:none;"
+        ></div>
+
+        <div
+          id="requestId"
+          class="request-id"
+          style="display:none;"
+        ></div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
+<!-- PAGAMENTO -->
 <section id="pagamento">
+  <div class="container">
 
-<h2 class="section-title">Pagamento</h2>
+    <div class="section-title">
+      <h2>Pagamento</h2>
+      <p>Algumas pesquisas podem ter custo dependendo do serviço solicitado.</p>
+    </div>
 
-<p class="section-subtitle">
-Quando o serviço tiver custo, o pagamento pode ser feito por Xpress.
-</p>
+    <div class="payment">
 
-<div class="payment">
+      <div>Pagamento por Xpress</div>
 
-<h3>💳 Xpress</h3>
+      <div class="xpress">
+        949 623 013
+      </div>
 
-<p>Enviar para o número:</p>
+      <p>
+        Antes de efectuar qualquer pagamento, confirma primeiro
+        connosco o valor e o serviço.
+      </p>
 
-<div class="payment-number">949 623 013</div>
+      <div class="warning">
+        ⚠️ Não envies dinheiro sem confirmar primeiro o valor do serviço.
+        Depois do pagamento, guarda o comprovativo.
+      </div>
 
-<button class="copy-btn" onclick="copiarNumero()">
-📋 COPIAR NÚMERO
-</button>
+    </div>
 
-<p style="margin-top:18px">
-Antes de pagar, confirma connosco o valor do serviço.
-Depois envia o comprovativo pelo WhatsApp.
-</p>
-
-<p class="warning">
-⚠️ Não envies dinheiro sem confirmar primeiro o valor e o serviço.
-</p>
-
-<div class="buttons">
-
-<a class="btn btn-primary"
-href="https://wa.me/244949623013?text=Olá%2C%20quero%20confirmar%20o%20valor%20e%20o%20pagamento%20por%20Xpress."
-target="_blank">
-CONFIRMAR PAGAMENTO
-</a>
-
-<a class="btn btn-secondary"
-href="https://wa.me/244949623013?text=Olá%2C%20estou%20a%20enviar%20o%20comprovativo%20do%20pagamento%20Xpress."
-target="_blank">
-ENVIAR COMPROVATIVO
-</a>
-
-</div>
-
-</div>
-
+  </div>
 </section>
 
+<!-- FAQ -->
 <section>
+  <div class="container">
 
-<h2 class="section-title">Perguntas frequentes</h2>
+    <div class="section-title">
+      <h2>Perguntas frequentes</h2>
+    </div>
 
-<div class="faq">
-<strong>Vocês procuram qualquer informação?</strong>
-<p>Analisamos cada pedido e informamos se podemos realizar a pesquisa.</p>
-</div>
+    <div class="faq">
 
-<div class="faq">
-<strong>Quanto custa?</strong>
-<p>Depende do tipo e da complexidade do pedido. O valor é combinado antes do pagamento.</p>
-</div>
+      <details>
+        <summary>Preciso esperar o responsável estar online?</summary>
+        <p>
+          Não. O pedido é enviado para o servidor e o processamento automático
+          pode continuar mesmo quando o responsável não estiver online.
+        </p>
+      </details>
 
-<div class="faq">
-<strong>Como recebo a resposta?</strong>
-<p>Normalmente os resultados serão enviados através do WhatsApp.</p>
-</div>
+      <details>
+        <summary>A resposta da IA é sempre garantida?</summary>
+        <p>
+          Não. A IA procura informações e organiza os resultados, mas algumas
+          informações podem mudar. Sempre que possível, confirma os dados
+          directamente com a entidade responsável.
+        </p>
+      </details>
 
-<div class="faq">
-<strong>Posso fazer uma pergunta simples?</strong>
-<p>Sim. Envia o pedido e veremos como podemos ajudar.</p>
-</div>
+      <details>
+        <summary>Posso procurar qualquer coisa?</summary>
+        <p>
+          Podes fazer pesquisas dentro das categorias disponíveis e também
+          usar a opção de pesquisa personalizada.
+        </p>
+      </details>
 
-<div class="faq">
-<strong>Vocês garantem que toda informação encontrada está correta?</strong>
-<p>Não. A pesquisa procura fontes e informações relevantes, mas informações de terceiros devem ser verificadas antes de decisões ou pagamentos.</p>
-</div>
+      <details>
+        <summary>O formulário guarda o que escrevi?</summary>
+        <p>
+          Sim. O site guarda temporariamente o rascunho no teu dispositivo
+          para evitar que percas tudo se fechares ou actualizares a página.
+        </p>
+      </details>
 
+      <details>
+        <summary>Posso falar directamente com vocês?</summary>
+        <p>
+          Sim. Podes entrar em contacto através dos números de WhatsApp
+          apresentados abaixo.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
 </section>
 
-<section id="contacto" class="contact">
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
 
-<h2 class="section-title">Contacto</h2>
+    <div class="section-title">
+      <h2>Contacto</h2>
+      <p>Se precisares de ajuda directa, fala connosco pelo WhatsApp.</p>
+    </div>
 
-<p class="section-subtitle">
-Fala connosco diretamente pelo WhatsApp.
-</p>
+    <div class="contact">
 
-<a class="contact-number"
-href="https://wa.me/244949623013"
-target="_blank">
-📱 949 623 013
-</a>
+      <div class="contact-buttons">
 
-<a class="contact-number"
-href="https://wa.me/244928455916"
-target="_blank">
-📱 928 455 916
-</a>
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/244949623013"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 WhatsApp 949 623 013
+        </a>
 
-<p style="margin-top:18px;color:#aebfb7">
-WhatsApp principal: 949 623 013
-</p>
+        <a
+          class="btn btn-secondary"
+          href="https://wa.me/244928455916"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 WhatsApp 928 455 916
+        </a>
 
+      </div>
+
+      <div style="margin-top:20px;">
+        <button
+          class="btn btn-secondary"
+          onclick="partilharSite()"
+        >
+          📤 Partilhar este serviço
+        </button>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 </main>
 
 <footer>
-
-<p>© 2026 NÓS RESOLVEMOS 100% DO QUE PROCURAS</p>
-<p>Tu procuras. Nós encontramos.</p>
-
+  <div class="container">
+    <strong>NÓS RESOLVEMOS 100% DO QUE PROCURAS</strong>
+    <br>
+    Tu procuras. Nós encontramos.
+    <br><br>
+    © <span id="ano"></span> — Todos os direitos reservados.
+  </div>
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/244949623013?text=Olá%2C%20preciso%20de%20ajuda%20para%20encontrar%20uma%20solução."
-target="_blank"
-aria-label="WhatsApp">
-☎
+<a
+  class="whatsapp"
+  href="https://wa.me/244949623013"
+  target="_blank"
+  rel="noopener"
+  aria-label="WhatsApp"
+>
+  ☎
 </a>
 
-<a class="top"
-id="topButton"
-href="#top"
-aria-label="Voltar ao topo">
-↑
-</a>
-
-<script>
-
-const NUMERO_PRINCIPAL = "244949623013";
-const NUMERO_XPRESS = "949623013";
-
-/*
- * ENDEREÇO DO NOSSO BACKEND SUPABASE
- */
-const BACKEND_URL =
-"https://biirfrcetsogqcbimhcg.supabase.co/functions/v1/smart-worker";
-
-
-function servico(tipo){
-
-const mensagem =
-`Olá! Quero solicitar uma pesquisa.
-
-Serviço: ${tipo}
-
-Gostaria de saber como funciona e qual é o valor do serviço.
-
-Vim através do site "NÓS RESOLVEMOS 100% DO QUE PROCURAS".`;
-
-window.open(
-"https://wa.me/" +
-NUMERO_PRINCIPAL +
-"?text=" +
-encodeURIComponent(mensagem),
-"_blank"
-);
-
-}
-
-
-async function enviarPedido(){
-
-const botao =
-document.getElementById("enviarBtn");
-
-const status =
-document.getElementById("statusBox");
-
-const nome =
-document.getElementById("nome").value.trim();
-
-const telefone =
-document.getElementById("telefone").value.trim();
-
-const categoria =
-document.getElementById("categoria").value;
-
-const local =
-document.getElementById("local").value.trim();
-
-const pedido =
-document.getElementById("pedido").value.trim();
-
-
-status.className = "status-box";
-status.innerHTML = "";
-
-
-if(!nome){
-
-alert("Coloca o teu nome.");
-return;
-
-}
-
-if(!telefone){
-
-alert("Coloca o teu número de WhatsApp.");
-return;
-
-}
-
-if(!categoria){
-
-alert("Seleciona o tipo de pesquisa.");
-return;
-
-}
-
-if(!pedido){
-
-alert("Explica o que procuras.");
-return;
-
-}
-
-
-botao.disabled = true;
-botao.innerText = "⏳ A ENVIAR PEDIDO...";
-
-
-try{
-
-const resposta =
-await fetch(BACKEND_URL,{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-
-client_name:nome,
-
-client_phone:telefone,
-
-category:categoria,
-
-province:local,
-
-city:null,
-
-request_text:pedido
-
-})
-
-});
-
-
-let dados = null;
-
-try{
-dados = await resposta.json();
-}catch(e){
-dados = null;
-}
-
-
-if(!resposta.ok || !dados || !dados.success){
-
-throw new Error(
-dados && dados.message
-? dados.message
-: "O servidor não aceitou o pedido."
-);
-
-}
-
-
-status.className =
-"status-box status-success";
-
-status.innerHTML =
-"✅ <strong>Pedido recebido com sucesso!</strong><br><br>" +
-"Pedido nº <strong>" +
-dados.request_id +
-"</strong><br>" +
-"Já está registado no nosso sistema.";
-
-
-document.getElementById("pedido").value = "";
-
-
-/*
- * Depois de guardar no sistema,
- * abrimos também o WhatsApp para o cliente
- * poder avisar o contacto principal.
- */
-
-const mensagemWhatsApp =
-`Olá! Acabei de enviar um pedido pelo site.
-
-Pedido nº: ${dados.request_id}
-
-Nome: ${nome}
-
-Categoria: ${categoria}
-
-Pedido:
-${pedido}`;
-
-setTimeout(function(){
-
-window.open(
-"https://wa.me/" +
-NUMERO_PRINCIPAL +
-"?text=" +
-encodeURIComponent(mensagemWhatsApp),
-"_blank"
-);
-
-},800);
-
-
-}catch(erro){
-
-console.error(erro);
-
-status.className =
-"status-box status-error";
-
-status.innerHTML =
-"❌ <strong>Não foi possível registar o pedido agora.</strong><br><br>" +
-"Verifica a ligação à internet e tenta novamente.";
-
-alert(
-"Não foi possível enviar o pedido ao sistema.\n\n" +
-"Se o problema continuar, fala connosco pelo WhatsApp."
-);
-
-}finally{
-
-botao.disabled = false;
-
-botao.innerText =
-"📲 ENVIAR PEDIDO";
-
-}
-
-}
-
-
-function copiarNumero(){
-
-if(navigator.clipboard){
-
-navigator.clipboard.writeText(NUMERO_XPRESS)
-
-.then(function(){
-
-alert(
-"Número Xpress copiado: 949 623 013"
-);
-
-})
-
-.catch(function(){
-
-alert(
-"Número Xpress: 949 623 013"
-);
-
-});
-
-}else{
-
-alert(
-"Número Xpress: 949 623 013"
-);
-
-}
-
-}
-
-
-function partilharSite(){
-
-if(navigator.share){
-
-navigator.share({
-
-title:
-"NÓS RESOLVEMOS 100% DO QUE PROCURAS",
-
-text:
-"Tu procuras. Nós encontramos.",
-
-url:
-window.location.href
-
-});
-
-}else{
-
-if(navigator.clipboard){
-
-navigator.clipboard.writeText(
-window.location.href
-)
-
-.then(function(){
-
-alert(
-"Link do site copiado. Agora podes enviá-lo onde quiseres."
-);
-
-})
-
-.catch(function(){
-
-prompt(
-"Copia o link do site:",
-window.location.href
-);
-
-});
-
-}else{
-
-prompt(
-"Copia o link do site:",
-window.location.href
-);
-
-}
-
-}
-
-}
-
-
-window.addEventListener(
-"scroll",
-function(){
-
-const botao =
-document.getElementById("topButton");
-
-if(window.scrollY > 400){
-
-botao.style.display = "flex";
-
-}else{
-
-botao.style.display = "none";
-
-}
-
-});
-
-</script>
-
-</body>
-</html>
+<button
+  id="topBtn"
+  class="top"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  aria-label="Voltar 
