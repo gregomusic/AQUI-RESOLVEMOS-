@@ -2,419 +2,889 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>NÓS RESOLVEMOS 100% DO QUE PROCURAS</title>
 
-<meta name="description" content="Tu procuras. Nós encontramos. Pesquisa de empregos, cursos, empresas, documentos, negócios e soluções.">
+<meta name="description" content="Tu procuras. Nós encontramos. Pesquisa de empregos, cursos, serviços, oportunidades e soluções em Angola.">
+
+<meta name="theme-color" content="#06110a">
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
+
+*{
+box-sizing:border-box;
 margin:0;
-font-family:Arial,sans-serif;
-background:#07130b;
-color:white;
-line-height:1.5
+padding:0;
 }
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#06110a;
+color:#fff;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+font:inherit;
+}
+
+.container{
+width:92%;
+max-width:1100px;
+margin:auto;
+}
+
+/* CABEÇALHO */
+
 header{
 position:sticky;
 top:0;
-z-index:10;
-background:#07130b;
-border-bottom:1px solid #174b29
+z-index:999;
+background:#030a06;
+border-bottom:1px solid #174d2a;
 }
-.container{
-width:92%;
-max-width:1000px;
-margin:auto
-}
-.header{
-min-height:65px;
+
+.header-inner{
+min-height:70px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:10px
+gap:15px;
+padding:10px 0;
 }
+
 .logo{
 color:#00ff66;
-font-weight:bold;
-font-size:17px
+font-size:17px;
+font-weight:900;
 }
+
 .logo small{
 display:block;
-color:white;
-font-size:10px
+color:#fff;
+font-size:9px;
+letter-spacing:1px;
 }
+
 nav{
 display:flex;
 flex-wrap:wrap;
-gap:5px
+gap:5px;
+justify-content:flex-end;
 }
+
 nav a{
-color:white;
-text-decoration:none;
 font-size:12px;
-padding:7px
+padding:7px 9px;
+border-radius:7px;
 }
+
+nav a:hover{
+background:#00ff66;
+color:#031008;
+}
+
+/* HERO */
+
 .hero{
+padding:75px 0 60px;
 text-align:center;
-padding:65px 0;
-background:radial-gradient(circle,#0c5428,#07130b 65%)
+background:radial-gradient(
+circle at top,
+#104d27 0,
+#06110a 58%
+);
 }
-.hero h1{
-font-size:clamp(32px,8vw,60px);
-line-height:1.05
+
+.badge{
+display:inline-block;
+padding:7px 12px;
+border:1px solid #00ff66;
+border-radius:30px;
+color:#00ff66;
+font-size:11px;
+margin-bottom:18px;
 }
-.green{color:#00ff66}
+
+h1{
+font-size:clamp(30px,7vw,58px);
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+display:block;
+color:#00ff66;
+}
+
 .hero p{
-color:#c5d3ca;
-max-width:700px;
-margin:20px auto
+max-width:720px;
+margin:auto;
+color:#c9d4cc;
+font-size:17px;
 }
+
+.buttons{
+margin-top:28px;
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
 .btn{
 display:inline-block;
-border:0;
 padding:13px 20px;
 border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-text-decoration:none
+font-weight:800;
 }
-.btn-green{
+
+.btn-primary{
 background:#00ff66;
-color:#061008
+color:#031008;
 }
-section{padding:55px 0}
-.title{text-align:center;margin-bottom:30px}
-.title p{color:#aab9af}
-.services{
+
+.btn-secondary{
+border:1px solid #00ff66;
+color:#00ff66;
+}
+
+/* SEÇÕES */
+
+section{
+padding:60px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:32px;
+}
+
+.section-title h2{
+font-size:29px;
+margin-bottom:8px;
+}
+
+.section-title p{
+color:#aebbb2;
+}
+
+/* CARTÕES */
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:15px
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
-.service{
-background:#0c1c11;
-border:1px solid #204b2d;
-border-radius:14px;
-padding:20px;
-cursor:pointer
+
+.card{
+background:#0a1a0f;
+border:1px solid #174d2a;
+border-radius:15px;
+padding:23px;
 }
-.service:hover{border-color:#00ff66}
-.icon{font-size:30px}
-.service p{color:#aab9af;font-size:14px}
+
+.card-icon{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.card h3{
+color:#00ff66;
+margin-bottom:8px;
+}
+
+.card p{
+color:#c0cbc3;
+}
+
+/* COMO FUNCIONA */
+
 .steps{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-gap:15px
+grid-template-columns:repeat(4,1fr);
+gap:15px;
 }
+
 .step{
-background:#0c1c11;
-padding:18px;
-border-radius:12px;
-border:1px solid #204b2d
+text-align:center;
+padding:20px;
+border:1px solid #174d2a;
+border-radius:14px;
+background:#09160d;
 }
+
 .number{
-background:#00ff66;
-color:#061008;
-width:35px;
-height:35px;
+width:40px;
+height:40px;
+margin:0 auto 12px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:50%;
-display:grid;
-place-items:center;
-font-weight:bold
+background:#00ff66;
+color:#031008;
+font-weight:900;
 }
-.form{
+
+/* FORMULÁRIO */
+
+.form-box{
 max-width:750px;
 margin:auto;
-background:#0c1c11;
-padding:22px;
-border-radius:16px;
-border:1px solid #285936
+background:#09170d;
+border:1px solid #1b5c31;
+border-radius:18px;
+padding:25px;
 }
-input,select,textarea{
+
+.form-group{
+margin-bottom:17px;
+}
+
+.form-group label{
+display:block;
+margin-bottom:7px;
+font-weight:bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
 width:100%;
 padding:13px;
-margin-top:6px;
-margin-bottom:15px;
+border:1px solid #285d38;
 border-radius:9px;
-border:1px solid #315b3d;
-background:#07130b;
-color:white
+background:#030a06;
+color:#fff;
+outline:none;
 }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+border-color:#00ff66;
+}
+
 textarea{
 min-height:130px;
-resize:vertical
+resize:vertical;
 }
-label{font-weight:bold;font-size:14px}
+
+#enviar{
+width:100%;
+padding:15px;
+border:0;
+border-radius:10px;
+background:#00ff66;
+color:#031008;
+font-weight:900;
+cursor:pointer;
+}
+
+#enviar:disabled{
+opacity:.6;
+}
+
 #resultado{
 display:none;
 margin-top:20px;
 padding:18px;
-border-radius:10px;
-white-space:pre-wrap
+border-radius:12px;
+white-space:pre-wrap;
+word-break:break-word;
 }
-.ok{
-display:block!important;
+
+.result-success{
+display:block !important;
+background:#092614;
 border:1px solid #00ff66;
-background:#082c16
 }
-.erro{
-display:block!important;
-border:1px solid #ff5555;
-background:#321010
+
+.result-error{
+display:block !important;
+background:#2b0d0d;
+border:1px solid #ff4d4d;
 }
-.carregando{
-display:block!important;
-border:1px solid #aaa;
-background:#152219
+
+/* PAGAMENTO */
+
+.payment{
+text-align:center;
 }
-.payment,.contact{
+
+.payment-box{
 max-width:650px;
 margin:auto;
-text-align:center;
-background:#0c1c11;
-border:1px solid #285936;
-border-radius:15px;
-padding:25px
+padding:28px;
+border-radius:18px;
+background:#0a1a0f;
+border:1px solid #174d2a;
 }
-.numero{
-font-size:28px;
-font-weight:bold;
-color:#00ff66
+
+.payment-number{
+color:#00ff66;
+font-size:30px;
+font-weight:900;
+margin:12px 0;
 }
-.whatsapp{
-display:inline-block;
-background:#00ff66;
-color:#061008;
-padding:12px 18px;
-border-radius:9px;
-font-weight:bold;
-margin:6px;
-text-decoration:none
+
+/* FAQ */
+
+.faq{
+max-width:800px;
+margin:auto;
 }
+
 details{
-background:#0c1c11;
-border:1px solid #204b2d;
-padding:15px;
+background:#09170d;
+border:1px solid #174d2a;
 border-radius:10px;
-margin-bottom:8px
+padding:15px;
+margin-bottom:10px;
 }
-summary{cursor:pointer;font-weight:bold}
-footer{
+
+summary{
+cursor:pointer;
+font-weight:bold;
+color:#00ff66;
+}
+
+/* CONTACTO */
+
+.contact{
 text-align:center;
-padding:30px;
-border-top:1px solid #204b2d;
-color:#89968e
 }
-@media(max-width:650px){
-.header{flex-direction:column;padding:10px 0}
-nav{justify-content:center}
+
+.contact-numbers{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:20px;
 }
+
+.contact-number{
+border:1px solid #00ff66;
+padding:12px 18px;
+border-radius:10px;
+color:#00ff66;
+}
+
+/* RODAPÉ */
+
+footer{
+border-top:1px solid #174d2a;
+padding:30px 0;
+text-align:center;
+color:#8f9b93;
+font-size:13px;
+}
+
+/* TELEMÓVEL */
+
+@media(max-width:800px){
+
+.header-inner{
+flex-direction:column;
+}
+
+nav{
+justify-content:center;
+}
+
+.grid,
+.steps{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding-top:55px;
+}
+
+}
+
+@media(max-width:500px){
+
+nav a{
+font-size:11px;
+padding:6px 7px;
+}
+
+section{
+padding:50px 0;
+}
+
+.form-box{
+padding:18px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="container header">
 
-<div class="logo">
+<div class="container header-inner">
+
+<a href="#inicio" class="logo">
 NÓS RESOLVEMOS
 <small>100% DO QUE PROCURAS</small>
-</div>
+</a>
 
 <nav>
+
 <a href="#inicio">Início</a>
 <a href="#servicos">Serviços</a>
-<a href="#pedido">Pedir</a>
+<a href="#como">Como funciona</a>
+<a href="#pedido">Fazer pedido</a>
 <a href="#pagamento">Pagamento</a>
 <a href="#contacto">Contacto</a>
+
 </nav>
 
 </div>
+
 </header>
 
-<section class="hero" id="inicio">
+<main>
+
+<section id="inicio" class="hero">
+
 <div class="container">
 
+<div class="badge">
+SERVIÇO ONLINE EM ANGOLA
+</div>
+
 <h1>
-TU PROCURAS.<br>
-<span class="green">NÓS ENCONTRAMOS.</span>
+NÓS RESOLVEMOS
+<span>100% DO QUE PROCURAS</span>
 </h1>
 
 <p>
-Envia aquilo que estás à procura.
-O nosso sistema recebe o pedido e procura uma solução.
+Tu procuras. Nós encontramos.
+Envia aquilo que precisas encontrar
+e nós pesquisamos informações,
+oportunidades, serviços e soluções para ti.
 </p>
 
-<a href="#pedido" class="btn btn-green">
-🔎 FAZER PEDIDO
+<div class="buttons">
+
+<a href="#pedido" class="btn btn-primary">
+🔎 Fazer um pedido
+</a>
+
+<a
+href="https://wa.me/244949623013"
+target="_blank"
+rel="noopener"
+class="btn btn-secondary">
+💬 WhatsApp
 </a>
 
 </div>
+
+</div>
+
 </section>
+
 
 <section id="servicos">
+
 <div class="container">
 
-<div class="title">
-<h2>O que procuras?</h2>
-<p>Escolhe uma categoria.</p>
+<div class="section-title">
+
+<h2>O que podemos procurar?</h2>
+
+<p>
+Conta-nos aquilo que precisas encontrar.
+</p>
+
 </div>
 
-<div class="services">
+<div class="grid">
 
-<div class="service" onclick="escolher('Emprego')">
-<div class="icon">💼</div>
-<h3>Emprego</h3>
-<p>Vagas e oportunidades profissionais.</p>
+<div class="card">
+
+<div class="card-icon">💼</div>
+
+<h3>Empregos</h3>
+
+<p>
+Procuramos oportunidades de emprego
+e informações relacionadas com candidaturas.
+</p>
+
 </div>
 
-<div class="service" onclick="escolher('Curso ou formação')">
-<div class="icon">🎓</div>
-<h3>Curso ou formação</h3>
-<p>Cursos, bolsas e formações.</p>
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h3>Cursos</h3>
+
+<p>
+Procuramos cursos, formações,
+bolsas e oportunidades de aprendizagem.
+</p>
+
 </div>
 
-<div class="service" onclick="escolher('Empresa ou serviço')">
-<div class="icon">🏢</div>
-<h3>Empresa ou serviço</h3>
-<p>Empresas, serviços e contactos.</p>
+<div class="card">
+
+<div class="card-icon">🏢</div>
+
+<h3>Empresas e serviços</h3>
+
+<p>
+Procuramos empresas, serviços,
+contactos e informações úteis.
+</p>
+
 </div>
 
-<div class="service" onclick="escolher('Documento')">
-<div class="icon">📄</div>
-<h3>Documento</h3>
-<p>Informações e procedimentos.</p>
+<div class="card">
+
+<div class="card-icon">📄</div>
+
+<h3>Documentos</h3>
+
+<p>
+Procuramos informações sobre documentos,
+procedimentos e requisitos.
+</p>
+
 </div>
 
-<div class="service" onclick="escolher('Negócio')">
-<div class="icon">💰</div>
-<h3>Negócio</h3>
-<p>Ideias e oportunidades.</p>
+<div class="card">
+
+<div class="card-icon">💡</div>
+
+<h3>Negócios</h3>
+
+<p>
+Procuramos oportunidades e informações
+para começar ou melhorar um projeto.
+</p>
+
 </div>
 
-<div class="service" onclick="escolher('Pesquisa personalizada')">
-<div class="icon">🔎</div>
+<div class="card">
+
+<div class="card-icon">🔎</div>
+
 <h3>Pesquisa personalizada</h3>
-<p>Qualquer outra pesquisa.</p>
+
+<p>
+Se não encontrares a categoria certa,
+explica simplesmente o que procuras.
+</p>
+
 </div>
 
 </div>
-</div>
-</section>
 
-<section id="como">
+</div>
+
+</section><section id="como">
+
 <div class="container">
 
-<div class="title">
+<div class="section-title">
+
 <h2>Como funciona?</h2>
+
+<p>
+É simples e rápido.
+</p>
+
 </div>
 
 <div class="steps">
 
 <div class="step">
+
 <div class="number">1</div>
+
 <h3>Explica</h3>
-<p>Diz o que procuras.</p>
+
+<p>
+Conta-nos aquilo que estás à procura.
+</p>
+
 </div>
 
+
 <div class="step">
+
 <div class="number">2</div>
+
 <h3>Envia</h3>
-<p>O pedido vai para o sistema.</p>
+
+<p>
+O teu pedido é enviado para o nosso sistema.
+</p>
+
 </div>
 
+
 <div class="step">
+
 <div class="number">3</div>
-<h3>Pesquisa</h3>
-<p>O sistema analisa o pedido.</p>
+
+<h3>Pesquisamos</h3>
+
+<p>
+O sistema analisa o pedido e procura informações.
+</p>
+
 </div>
+
 
 <div class="step">
+
 <div class="number">4</div>
-<h3>Resposta</h3>
-<p>A resposta aparece na página.</p>
+
+<h3>Recebes</h3>
+
+<p>
+A resposta aparece diretamente no site.
+</p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
 <section id="pedido">
+
 <div class="container">
 
-<div class="title">
+<div class="section-title">
+
 <h2>Fazer um pedido</h2>
-<p>Preenche os dados e envia.</p>
+
+<p>
+Preenche os dados abaixo e explica o que procuras.
+</p>
+
 </div>
 
-<div class="form">
 
-<form id="pedidoForm" onsubmit="return enviarPedido(event)">
+<div class="form-box">
 
-<label>Nome</label>
-<input id="nome" type="text" placeholder="O teu nome" required>
+<form id="pedidoForm">
 
-<label>WhatsApp / telefone</label>
-<input id="telefone" type="tel" placeholder="949623013" required>
+<div class="form-group">
 
-<label>Categoria</label>
-<select id="categoria" required>
-<option value="">Escolher categoria</option>
-<option>Emprego</option>
-<option>Curso ou formação</option>
-<option>Empresa ou serviço</option>
-<option>Documento</option>
-<option>Negócio</option>
-<option>Pesquisa personalizada</option>
+<label for="nome">
+Nome
+</label>
+
+<input
+id="nome"
+type="text"
+placeholder="O teu nome"
+autocomplete="name">
+
+</div>
+
+
+<div class="form-group">
+
+<label for="telefone">
+Telefone / WhatsApp
+</label>
+
+<input
+id="telefone"
+type="tel"
+placeholder="Ex.: 949623013"
+autocomplete="tel">
+
+</div>
+
+
+<div class="form-group">
+
+<label for="categoria">
+O que procuras?
+</label>
+
+<select id="categoria">
+
+<option value="">
+Seleciona uma categoria
+</option>
+
+<option value="Emprego">
+💼 Emprego
+</option>
+
+<option value="Curso">
+🎓 Curso / Formação
+</option>
+
+<option value="Empresa ou serviço">
+🏢 Empresa / Serviço
+</option>
+
+<option value="Documento">
+📄 Documento / Procedimento
+</option>
+
+<option value="Negócio">
+💡 Negócio / Oportunidade
+</option>
+
+<option value="Pesquisa personalizada">
+🔎 Outra pesquisa
+</option>
+
 </select>
 
-<label>Província / cidade</label>
-<input id="provincia" type="text" placeholder="Ex.: Luanda">
+</div>
 
-<label>O que procuras?</label>
-<textarea id="pedidoTexto" placeholder="Explica exatamente o que precisas..." required></textarea>
 
-<button id="enviar" type="submit" class="btn btn-green" style="width:100%">
+<div class="form-group">
+
+<label for="provincia">
+Província
+</label>
+
+<select id="provincia">
+
+<option value="">
+Seleciona a província
+</option>
+
+<option value="Bengo">Bengo</option>
+<option value="Benguela">Benguela</option>
+<option value="Bié">Bié</option>
+<option value="Cabinda">Cabinda</option>
+<option value="Cuando">Cuando</option>
+<option value="Cuanza Norte">Cuanza Norte</option>
+<option value="Cuanza Sul">Cuanza Sul</option>
+<option value="Cubango">Cubango</option>
+<option value="Cunene">Cunene</option>
+<option value="Icolo e Bengo">Icolo e Bengo</option>
+<option value="Huambo">Huambo</option>
+<option value="Huíla">Huíla</option>
+<option value="Luanda">Luanda</option>
+<option value="Lunda Norte">Lunda Norte</option>
+<option value="Lunda Sul">Lunda Sul</option>
+<option value="Malanje">Malanje</option>
+<option value="Moxico">Moxico</option>
+<option value="Moxico Leste">Moxico Leste</option>
+<option value="Namibe">Namibe</option>
+<option value="Uíge">Uíge</option>
+<option value="Zaire">Zaire</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="pedidoTexto">
+Descreve exatamente o que procuras
+</label>
+
+<textarea
+id="pedidoTexto"
+maxlength="3000"
+placeholder="Ex.: Procuro cursos de soldadura em Luanda com certificado e inscrições abertas."></textarea>
+
+</div>
+
+
+<button
+type="button"
+id="enviar"
+onclick="enviarPedido()">
+
 🔎 ENVIAR PEDIDO
+
 </button>
 
-</form>
 
 <div id="resultado"></div>
 
+</form>
+
 </div>
+
 </div>
-</section><!-- PAGAMENTO -->
+
+</section>
+
 
 <section id="pagamento">
 
-<div class="container">
+<div class="container payment">
 
-<div class="title">
+<div class="section-title">
 
 <h2>Pagamento</h2>
 
 <p>
-Pagamento por Xpress quando aplicável.
+Quando for necessário pagar pelo serviço,
+utiliza o Xpress.
 </p>
 
 </div>
 
-<div class="payment">
 
-<p>Número Xpress</p>
+<div class="payment-box">
 
-<div class="numero">
+<p>
+Número Xpress
+</p>
+
+<div class="payment-number">
 949 623 013
 </div>
 
 <p>
-Confirma sempre o valor e as instruções antes de efectuar qualquer pagamento.
+Depois do pagamento, guarda o comprovativo.
 </p>
+
+<div class="buttons">
+
+<a
+href="https://wa.me/244949623013"
+target="_blank"
+rel="noopener"
+class="btn btn-primary">
+
+📲 Enviar comprovativo
+
+</a>
+
+</div>
 
 </div>
 
@@ -423,63 +893,88 @@ Confirma sempre o valor e as instruções antes de efectuar qualquer pagamento.
 </section>
 
 
-<!-- PERGUNTAS -->
-
-<section>
+<section id="faq">
 
 <div class="container">
 
-<div class="title">
+<div class="section-title">
 
 <h2>Perguntas frequentes</h2>
 
 </div>
 
-<details>
-<summary>Preciso criar uma conta?</summary>
-<p>
-Não. Podes enviar o pedido diretamente pelo formulário.
-</p>
-</details>
+
+<div class="faq">
 
 <details>
-<summary>Que tipo de pesquisa posso pedir?</summary>
+
+<summary>
+Que tipo de pedido posso fazer?
+</summary>
+
 <p>
-Empregos, cursos, empresas, serviços, documentos,
-negócios e pesquisas personalizadas.
+Podes pedir pesquisas sobre empregos,
+cursos, empresas, serviços,
+documentos, oportunidades ou outros assuntos.
 </p>
+
 </details>
 
-<details>
-<summary>A resposta é automática?</summary>
-<p>
-O pedido é enviado para o sistema. Quando o servidor e a
-inteligência artificial estiverem correctamente configurados,
-a resposta será processada automaticamente.
-</p>
-</details>
 
 <details>
-<summary>Posso falar pelo WhatsApp?</summary>
+
+<summary>
+O sistema responde automaticamente?
+</summary>
+
 <p>
-Sim. Também podes contactar directamente através dos números abaixo.
+O pedido é enviado para o sistema
+e pode ser processado automaticamente
+pela inteligência artificial.
 </p>
+
 </details>
+
+
+<details>
+
+<summary>
+Posso contactar pelo WhatsApp?
+</summary>
+
+<p>
+Sim. Podes contactar-nos pelos números
+indicados na área de contacto.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+O serviço funciona em toda Angola?
+</summary>
+
+<p>
+Sim. O formulário permite selecionar
+as diferentes províncias de Angola.
+</p>
+
+</details>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- CONTACTO -->
-
 <section id="contacto">
 
-<div class="container">
+<div class="container contact">
 
-<div class="contact">
-
-<div class="title">
+<div class="section-title">
 
 <h2>Contacto</h2>
 
@@ -489,22 +984,28 @@ Fala connosco pelo WhatsApp.
 
 </div>
 
-<a
-class="whatsapp"
-href="https://wa.me/244949623013"
-target="_blank"
-rel="noopener"
->
-💬 949 623 013
-</a>
+
+<div class="contact-numbers">
 
 <a
-class="whatsapp"
+class="contact-number"
+href="https://wa.me/244949623013"
+target="_blank"
+rel="noopener">
+
+WhatsApp: 949 623 013
+
+</a>
+
+
+<a
+class="contact-number"
 href="https://wa.me/244928455916"
 target="_blank"
-rel="noopener"
->
-💬 928 455 916
+rel="noopener">
+
+WhatsApp: 928 455 916
+
 </a>
 
 </div>
@@ -519,77 +1020,32 @@ rel="noopener"
 
 <footer>
 
-NÓS RESOLVEMOS 100% DO QUE PROCURAS
+<div class="container">
 
-<br>
+<p>
+© 2026 NÓS RESOLVEMOS 100% DO QUE PROCURAS
+</p>
 
+<p>
 Tu procuras. Nós encontramos.
+</p>
 
-<br><br>
+</div>
 
-© <span id="ano"></span> Todos os direitos reservados.
-
-</footer>
-
-
-<script>
-
-/* ==================================================
-   ENDEREÇO DO BACKEND
-   ================================================== */
+</footer><script>
 
 const BACKEND_URL =
 "https://biirfrcetsogqcbimhcg.supabase.co/functions/v1/smart-worker";
 
 
-/* ==================================================
-   ANO
-   ================================================== */
-
-document.getElementById("ano").textContent =
-new Date().getFullYear();
-
-
-/* ==================================================
-   ESCOLHER SERVIÇO
-   ================================================== */
-
-function escolher(tipo){
-
-document.getElementById("categoria").value = tipo;
-
-document.getElementById("pedido")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-/* ==================================================
-   ENVIAR PEDIDO
-   ================================================== */
-
-async function enviarPedido(event){
-
-/*
-IMPede o navegador de recarregar
-e voltar ao topo.
-*/
-
-event.preventDefault();
-
-event.stopPropagation();
-
-
-const resultado =
-document.getElementById("resultado");
+async function enviarPedido(){
 
 const botao =
 document.getElementById("enviar");
 
+const resultado =
+document.getElementById("resultado");
 
-/* PEGAR OS DADOS */
 
 const nome =
 document.getElementById("nome").value.trim();
@@ -598,83 +1054,91 @@ const telefone =
 document.getElementById("telefone").value.trim();
 
 const categoria =
-document.getElementById("categoria").value.trim();
+document.getElementById("categoria").value;
 
 const provincia =
-document.getElementById("provincia").value.trim();
+document.getElementById("provincia").value;
 
 const pedidoTexto =
 document.getElementById("pedidoTexto").value.trim();
 
 
-/* VALIDAR */
+resultado.className="";
+resultado.style.display="none";
+resultado.textContent="";
+
 
 if(!nome){
 
-mostrarErro("Coloca o teu nome.");
+mostrarErro("⚠️ Escreve o teu nome.");
 
-return false;
+document.getElementById("nome").focus();
+
+return;
 
 }
 
 
 if(!telefone){
 
-mostrarErro("Coloca o teu número de telefone.");
+mostrarErro("⚠️ Escreve o teu número de telefone.");
 
-return false;
+document.getElementById("telefone").focus();
+
+return;
 
 }
 
 
 if(!categoria){
 
-mostrarErro("Escolhe uma categoria.");
+mostrarErro("⚠️ Seleciona uma categoria.");
 
-return false;
+document.getElementById("categoria").focus();
+
+return;
 
 }
 
 
 if(!pedidoTexto){
 
-mostrarErro("Explica o que procuras.");
+mostrarErro("⚠️ Descreve aquilo que procuras.");
 
-return false;
+document.getElementById("pedidoTexto").focus();
+
+return;
 
 }
 
 
-/* MOSTRAR PROCESSAMENTO */
+botao.disabled=true;
 
-resultado.className = "carregando";
-
-resultado.innerHTML =
-"⏳ A processar o teu pedido...<br><br>" +
-"Não feches esta página.";
-
-botao.disabled = true;
-
-botao.textContent =
-"⏳ A PROCESSAR...";
+botao.textContent="⏳ A PROCESSAR...";
 
 
-/* ==================================================
-   ENVIAR PARA SUPABASE
-   ================================================== */
+mostrarSucesso(
+"⏳ Pedido enviado.\n\nA procurar uma resposta..."
+);
+
 
 try{
 
-const resposta =
-await fetch(
+
+const resposta = await fetch(
+
 BACKEND_URL,
+
 {
 
 method:"POST",
 
 headers:{
+
 "Content-Type":"application/json",
+
 "Accept":"application/json"
+
 },
 
 body:JSON.stringify({
@@ -692,84 +1156,61 @@ request_text:pedidoTexto
 })
 
 }
+
 );
 
-
-/* LER RESPOSTA */
 
 const texto =
 await resposta.text();
 
 
-let dados;
+let dados={};
 
 
 try{
 
-dados = JSON.parse(texto);
-
-}catch(e){
-
-dados = null;
+dados =
+texto ? JSON.parse(texto) : {};
 
 }
 
+catch(e){
 
-/* VERIFICAR ERRO HTTP */
+throw new Error(
+"Resposta inválida do servidor."
+);
+
+}
+
 
 if(!resposta.ok){
 
-let mensagem =
-"Erro do servidor: HTTP " +
-resposta.status;
-
-
-if(dados && dados.error){
-
-mensagem +=
-"\n\n" +
-dados.error;
-
-}else if(texto){
-
-mensagem +=
-"\n\n" +
-texto.substring(0,1000);
-
-}
-
-
-throw new Error(mensagem);
-
-}
-
-
-/* VERIFICAR RESPOSTA */
-
-if(!dados){
-
 throw new Error(
-"O servidor não enviou uma resposta válida."
-);
 
-}
-
-
-/* VERIFICAR SUCESSO */
-
-if(dados.success !== true){
-
-throw new Error(
 dados.error ||
-"O servidor não conseguiu processar o pedido."
+dados.message ||
+("Erro HTTP "+resposta.status)
+
 );
 
 }
 
 
-/* PEGAR RESPOSTA DA IA */
+if(!dados.success){
+
+throw new Error(
+
+dados.error ||
+dados.message ||
+"Pedido não processado."
+
+);
+
+}
+
 
 const respostaIA =
+
 dados.answer ||
 dados.ai_answer ||
 dados.response;
@@ -778,89 +1219,71 @@ dados.response;
 if(!respostaIA){
 
 throw new Error(
-"O pedido foi recebido, mas não existe resposta da IA."
+"O pedido foi recebido, mas não recebemos a resposta."
 );
 
 }
 
 
-/* ==================================================
-   MOSTRAR RESULTADO
-   ================================================== */
+mostrarSucesso(
 
-resultado.className = "ok";
+"✅ RESPOSTA ENCONTRADA\n\n" +
+respostaIA
 
-resultado.innerHTML =
-"<strong>✅ PEDIDO PROCESSADO</strong><br><br>" +
-escapar(respostaIA);
+);
 
-
-/* LIMPAR FORMULÁRIO */
 
 document.getElementById("pedidoForm").reset();
 
 
-}catch(erro){
+}
 
-console.error(erro);
+catch(erro){
 
 mostrarErro(
+
 "❌ ERRO AO PROCESSAR O PEDIDO\n\n" +
 erro.message
+
 );
 
 }
 
+finally{
 
-/* VOLTAR BOTÃO */
+botao.disabled=false;
 
-botao.disabled = false;
-
-botao.textContent =
-"🔎 ENVIAR PEDIDO";
-
-
-return false;
+botao.textContent="🔎 ENVIAR PEDIDO";
 
 }
 
+}
 
-/* ==================================================
-   MOSTRAR ERRO
-   ================================================== */
 
 function mostrarErro(mensagem){
 
 const resultado =
 document.getElementById("resultado");
 
-resultado.className = "erro";
+resultado.className="result-error";
 
-resultado.textContent =
-mensagem;
+resultado.textContent=mensagem;
 
-resultado.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
+resultado.style.display="block";
 
 }
 
 
-/* ==================================================
-   PROTEGER TEXTO
-   ================================================== */
+function mostrarSucesso(mensagem){
 
-function escapar(texto){
+const resultado =
+document.getElementById("resultado");
 
-const div =
-document.createElement("div");
+resultado.className="result-success";
 
-div.textContent =
-texto;
+resultado.textContent=mensagem;
 
-return div.innerHTML
-.replace(/\n/g,"<br>");
+resultado.style.display="block";
 
 }
 
