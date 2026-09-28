@@ -6,692 +6,827 @@
 
 <title>NÓS RESOLVEMOS 100% DO QUE PROCURAS</title>
 
-<meta name="description" content="Tu procuras. Nós encontramos. Serviço de pesquisa e resolução de problemas em Angola através de WhatsApp.">
+<meta name="description" content="Tu procuras. Nós encontramos. Pesquisamos empregos, cursos, empresas, documentos, negócios e outras informações em Angola.">
 <meta name="theme-color" content="#063b2a">
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#07120e;
-  color:#fff;
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#06110c;
+color:#fff;
+line-height:1.6;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{text-decoration:none;color:inherit}
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(4,25,18,.97);
-  border-bottom:1px solid #159447;
-  padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(3,24,16,.98);
+border-bottom:1px solid #18a45b;
+padding:14px;
 }
 
 .logo{
-  text-align:center;
-  font-size:21px;
-  font-weight:900;
-  color:#20e878;
+text-align:center;
+font-size:20px;
+font-weight:900;
+color:#20e878;
 }
 
 .logo small{
-  display:block;
-  color:#fff;
-  font-size:12px;
-  font-weight:normal;
+display:block;
+color:#fff;
+font-size:11px;
+font-weight:normal;
 }
 
 nav{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-top:12px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:6px;
+margin-top:11px;
 }
 
 nav a{
-  background:#0d2b20;
-  border:1px solid #176e48;
-  padding:7px 10px;
-  border-radius:20px;
-  font-size:12px;
+padding:7px 10px;
+border:1px solid #176e48;
+border-radius:20px;
+font-size:12px;
+background:#0b271c;
 }
 
-nav a:hover{
-  background:#159447;
-}
+nav a:hover{background:#159447}
 
 .hero{
-  padding:70px 20px;
-  text-align:center;
-  background:
-    radial-gradient(circle at top,#0b573b 0,#07120e 55%);
+padding:70px 18px;
+text-align:center;
+background:radial-gradient(circle at top,#0b573b 0,#06110c 60%);
 }
 
 .hero h1{
-  font-size:clamp(32px,8vw,60px);
-  line-height:1.05;
-  color:#20e878;
-  margin-bottom:18px;
+font-size:clamp(34px,9vw,62px);
+line-height:1.03;
+color:#20e878;
+margin-bottom:18px;
 }
 
 .hero p{
-  max-width:700px;
-  margin:auto;
-  font-size:18px;
-  color:#d7e8df;
+max-width:720px;
+margin:auto;
+font-size:18px;
+color:#d5e7de;
 }
 
 .buttons{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:28px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin-top:25px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:30px;
-  font-weight:bold;
-  border:1px solid #20e878;
+display:inline-block;
+padding:13px 19px;
+border-radius:30px;
+font-weight:bold;
+border:1px solid #20e878;
+cursor:pointer;
 }
 
 .btn-primary{
-  background:#20e878;
-  color:#03140d;
+background:#20e878;
+color:#03140d;
 }
 
 .btn-secondary{
-  background:#0c251b;
+background:#0b251a;
+color:#fff;
 }
 
 section{
-  padding:55px 18px;
-  max-width:1100px;
-  margin:auto;
+max-width:1100px;
+margin:auto;
+padding:55px 16px;
 }
 
 .section-title{
-  text-align:center;
-  color:#20e878;
-  font-size:30px;
-  margin-bottom:10px;
+text-align:center;
+font-size:30px;
+color:#20e878;
+margin-bottom:8px;
 }
 
 .section-subtitle{
-  text-align:center;
-  color:#b9ccc3;
-  margin-bottom:30px;
+text-align:center;
+color:#b9ccc3;
+margin-bottom:28px;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:17px;
 }
 
 .card{
-  background:#0b1f17;
-  border:1px solid #145b3d;
-  border-radius:16px;
-  padding:23px;
-  box-shadow:0 5px 20px rgba(0,0,0,.2);
+background:#0b1f17;
+border:1px solid #155d40;
+border-radius:17px;
+padding:22px;
+transition:.2s;
 }
 
-.card h3{
-  color:#20e878;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#c6d6cf;
-  font-size:14px;
+.card:hover{
+transform:translateY(-3px);
+border-color:#20e878;
 }
 
 .icon{
-  font-size:35px;
-  margin-bottom:10px;
+font-size:36px;
+margin-bottom:7px;
+}
+
+.card h3{
+color:#20e878;
+margin-bottom:7px;
+}
+
+.card p{
+color:#c7d8d0;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.service-btn{
+display:inline-block;
+background:#20e878;
+color:#03140d;
+padding:9px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
 }
 
 .steps{
-  counter-reset:step;
+display:grid;
+gap:14px;
 }
 
 .step{
-  position:relative;
-  padding:20px 20px 20px 65px;
-  margin-bottom:15px;
-  background:#0b1f17;
-  border-radius:14px;
-  border:1px solid #145b3d;
+background:#0b1f17;
+border:1px solid #155d40;
+border-radius:15px;
+padding:20px;
 }
 
-.step:before{
-  counter-increment:step;
-  content:counter(step);
-  position:absolute;
-  left:18px;
-  top:18px;
-  width:34px;
-  height:34px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#20e878;
-  color:#03140d;
-  border-radius:50%;
-  font-weight:bold;
+.step strong{
+color:#20e878;
+font-size:18px;
 }
 
 .form-box{
-  max-width:650px;
-  margin:auto;
-  background:#0b1f17;
-  border:1px solid #176e48;
-  border-radius:18px;
-  padding:25px;
+max-width:680px;
+margin:auto;
+background:#0b1f17;
+border:1px solid #176e48;
+border-radius:18px;
+padding:24px;
 }
 
 label{
-  display:block;
-  margin-top:15px;
-  margin-bottom:6px;
-  font-weight:bold;
+display:block;
+margin-top:14px;
+margin-bottom:6px;
+font-weight:bold;
 }
 
-input,textarea,select{
-  width:100%;
-  padding:13px;
-  border-radius:9px;
-  border:1px solid #286b4d;
-  background:#06130e;
-  color:#fff;
-  font-size:15px;
+input,select,textarea{
+width:100%;
+padding:13px;
+border-radius:9px;
+border:1px solid #286b4d;
+background:#06130e;
+color:#fff;
+font-size:15px;
 }
 
 textarea{
-  min-height:130px;
-  resize:vertical;
+min-height:130px;
+resize:vertical;
 }
 
 button{
-  width:100%;
-  margin-top:20px;
-  padding:14px;
-  border:0;
-  border-radius:30px;
-  background:#20e878;
-  color:#03140d;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
+border:0;
+cursor:pointer;
+}
+
+.main-button{
+width:100%;
+margin-top:20px;
+padding:14px;
+border-radius:30px;
+background:#20e878;
+color:#03140d;
+font-weight:bold;
+font-size:16px;
 }
 
 .payment{
-  text-align:center;
-  background:linear-gradient(135deg,#073a28,#0b1f17);
-  border:1px solid #20e878;
-  border-radius:18px;
-  padding:30px 20px;
+text-align:center;
+background:linear-gradient(135deg,#073a28,#0b1f17);
+border:1px solid #20e878;
+border-radius:18px;
+padding:30px 18px;
 }
 
 .payment-number{
-  font-size:30px;
-  font-weight:900;
-  color:#20e878;
-  margin:12px 0;
+font-size:30px;
+font-weight:900;
+color:#20e878;
+margin:12px 0;
+}
+
+.copy-btn{
+padding:10px 17px;
+border-radius:25px;
+background:#fff;
+color:#063b2a;
+font-weight:bold;
 }
 
 .warning{
-  color:#ffd66b;
-  font-size:14px;
-  margin-top:12px;
+color:#ffd66b;
+font-size:14px;
+margin-top:14px;
+}
+
+.contact{text-align:center}
+
+.contact-number{
+display:inline-block;
+margin:6px;
+padding:12px 18px;
+border-radius:30px;
+background:#20e878;
+color:#03140d;
+font-weight:bold;
 }
 
 .faq{
-  border-bottom:1px solid #285540;
-  padding:16px 0;
+padding:16px 0;
+border-bottom:1px solid #285540;
 }
 
 .faq strong{
-  color:#20e878;
+display:block;
+color:#20e878;
+margin-bottom:5px;
 }
 
-.contact{
-  text-align:center;
-}
-
-.contact-number{
-  display:inline-block;
-  margin:7px;
-  padding:12px 18px;
-  border-radius:30px;
-  background:#20e878;
-  color:#03140d;
-  font-weight:bold;
+.notice{
+background:#102a20;
+border-left:4px solid #20e878;
+padding:15px;
+border-radius:8px;
+margin-top:20px;
+color:#d4e4dd;
+font-size:14px;
 }
 
 footer{
-  text-align:center;
-  padding:35px 15px;
-  background:#04100b;
-  color:#9db1a8;
-  font-size:13px;
+text-align:center;
+padding:35px 15px;
+background:#03100a;
+color:#9db1a8;
+font-size:13px;
+}
+
+.share-box{
+text-align:center;
+margin-top:25px;
+}
+
+.share-btn{
+padding:12px 20px;
+border-radius:25px;
+background:#20e878;
+color:#03140d;
+font-weight:bold;
+}
+
+.top{
+position:fixed;
+right:18px;
+bottom:85px;
+width:45px;
+height:45px;
+border-radius:50%;
+background:#fff;
+color:#063b2a;
+display:none;
+align-items:center;
+justify-content:center;
+font-size:20px;
+z-index:900;
 }
 
 .whatsapp{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:999;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#20e878;
-  color:#03140d;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  box-shadow:0 5px 20px #000;
+position:fixed;
+right:18px;
+bottom:18px;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#20e878;
+color:#03140d;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:27px;
+z-index:999;
+box-shadow:0 5px 20px #000;
 }
 
 @media(max-width:600px){
-  .hero{
-    padding:55px 15px;
-  }
-
-  .hero h1{
-    font-size:37px;
-  }
-
-  section{
-    padding:45px 14px;
-  }
-
-  .payment-number{
-    font-size:25px;
-  }
+.hero{padding:55px 15px}
+.hero h1{font-size:38px}
+section{padding:45px 14px}
+.payment-number{font-size:25px}
 }
 </style>
 </head>
 
-<body>
+<body id="top">
 
 <header>
-  <div class="logo">
-    NÓS RESOLVEMOS
-    <small>100% DO QUE PROCURAS</small>
-  </div>
+<div class="logo">
+NÓS RESOLVEMOS
+<small>100% DO QUE PROCURAS</small>
+</div>
 
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#como">Como funciona</a>
-    <a href="#pedir">Pedir ajuda</a>
-    <a href="#pagamento">Pagamento</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<nav>
+<a href="#top">Início</a>
+<a href="#servicos">Serviços</a>
+<a href="#como">Como funciona</a>
+<a href="#pedir">Pedir ajuda</a>
+<a href="#pagamento">Pagamento</a>
+<a href="#contacto">Contacto</a>
+</nav>
 </header>
 
 <main>
 
-<section class="hero" id="inicio">
-  <h1>Tu procuras.<br>Nós encontramos.</h1>
+<section class="hero">
 
-  <p>
-    Precisas encontrar uma informação, oportunidade, empresa,
-    curso, emprego, documento ou solução?
-    Nós pesquisamos e ajudamos-te a encontrar.
-  </p>
+<h1>Tu procuras.<br>Nós encontramos.</h1>
 
-  <div class="buttons">
-    <a class="btn btn-primary" href="#pedir">🔎 PEDIR UMA PESQUISA</a>
-    <a class="btn btn-secondary" href="#servicos">VER SERVIÇOS</a>
-  </div>
+<p>
+Precisas encontrar uma informação, oportunidade, emprego,
+curso, empresa, documento, fornecedor ou solução?
+Nós pesquisamos e ajudamos-te a encontrar.
+</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#pedir">🔎 PEDIR UMA PESQUISA</a>
+<a class="btn btn-secondary" href="#servicos">VER SERVIÇOS</a>
+</div>
+
+<div class="share-box">
+<button class="share-btn" onclick="partilharSite()">📤 PARTILHAR SITE</button>
+</div>
+
 </section>
 
 <section id="servicos">
 
-  <h2 class="section-title">O que podemos procurar?</h2>
+<h2 class="section-title">O que podemos procurar?</h2>
 
-  <p class="section-subtitle">
-    Diz-nos o que procuras e fazemos a pesquisa por ti.
-  </p>
+<p class="section-subtitle">
+Escolhe um serviço para iniciar o teu pedido.
+</p>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <div class="icon">💼</div>
-      <h3>Empregos</h3>
-      <p>
-        Procuramos oportunidades de emprego e informações
-        sobre candidaturas.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">💼</div>
+<h3>Empregos</h3>
+<p>Procuramos oportunidades de emprego e informações sobre candidaturas.</p>
+<a class="service-btn" href="#" onclick="servico('Emprego');return false;">PEDIR PESQUISA</a>
+</div>
 
-    <div class="card">
-      <div class="icon">🎓</div>
-      <h3>Cursos</h3>
-      <p>
-        Procuramos cursos, formações, bolsas e oportunidades
-        de aprendizagem.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Cursos e formações</h3>
+<p>Procuramos cursos, formações, bolsas e oportunidades de aprendizagem.</p>
+<a class="service-btn" href="#" onclick="servico('Curso ou formação');return false;">PEDIR PESQUISA</a>
+</div>
 
-    <div class="card">
-      <div class="icon">🏢</div>
-      <h3>Empresas e serviços</h3>
-      <p>
-        Ajudamos a encontrar empresas, profissionais,
-        lojas e serviços.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Empresas e serviços</h3>
+<p>Procuramos empresas, profissionais, lojas e serviços.</p>
+<a class="service-btn" href="#" onclick="servico('Empresa ou serviço');return false;">PEDIR PESQUISA</a>
+</div>
 
-    <div class="card">
-      <div class="icon">📄</div>
-      <h3>Documentos</h3>
-      <p>
-        Procuramos informações sobre documentos,
-        procedimentos e requisitos.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">📄</div>
+<h3>Documentos</h3>
+<p>Procuramos informações sobre documentos, requisitos e procedimentos.</p>
+<a class="service-btn" href="#" onclick="servico('Documento ou procedimento');return false;">PEDIR PESQUISA</a>
+</div>
 
-    <div class="card">
-      <div class="icon">💡</div>
-      <h3>Negócios</h3>
-      <p>
-        Procuramos fornecedores, oportunidades e informações
-        para quem quer começar ou desenvolver um negócio.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">💡</div>
+<h3>Negócios</h3>
+<p>Procuramos fornecedores, oportunidades e informações para negócios.</p>
+<a class="service-btn" href="#" onclick="servico('Negócio ou fornecedor');return false;">PEDIR PESQUISA</a>
+</div>
 
-    <div class="card">
-      <div class="icon">🔎</div>
-      <h3>Pesquisa personalizada</h3>
-      <p>
-        Tens uma pergunta diferente? Explica-nos o problema
-        e pesquisamos uma solução.
-      </p>
-    </div>
+<div class="card">
+<div class="icon">🔎</div>
+<h3>Pesquisa personalizada</h3>
+<p>Não encontraste a categoria certa? Explica o que procuras.</p>
+<a class="service-btn" href="#" onclick="servico('Pesquisa personalizada');return false;">PEDIR PESQUISA</a>
+</div>
 
-  </div>
+</div>
 </section>
 
 <section id="como">
 
-  <h2 class="section-title">Como funciona?</h2>
+<h2 class="section-title">Como funciona?</h2>
 
-  <p class="section-subtitle">
-    Simples, rápido e através do WhatsApp.
-  </p>
+<p class="section-subtitle">
+Um processo simples através do WhatsApp.
+</p>
 
-  <div class="steps">
+<div class="steps">
 
-    <div class="step">
-      <h3>Explica o que procuras</h3>
-      <p>
-        Conta-nos claramente o que precisas encontrar.
-      </p>
-    </div>
+<div class="step">
+<strong>1. Tu explicas</strong>
+<p>Conta-nos exatamente o que estás a procurar.</p>
+</div>
 
-    <div class="step">
-      <h3>Nós pesquisamos</h3>
-      <p>
-        Fazemos a pesquisa e procuramos informações
-        relevantes para o teu pedido.
-      </p>
-    </div>
+<div class="step">
+<strong>2. Nós analisamos</strong>
+<p>Verificamos o pedido e informamos o que podemos fazer.</p>
+</div>
 
-    <div class="step">
-      <h3>Recebes os resultados</h3>
-      <p>
-        Enviamos as informações encontradas através do WhatsApp.
-      </p>
-    </div>
+<div class="step">
+<strong>3. Combinamos o serviço</strong>
+<p>Quando houver custo, o valor é informado antes do pagamento.</p>
+</div>
 
-    <div class="step">
-      <h3>Tu decides o que fazer</h3>
-      <p>
-        A decisão final sobre a utilização das informações
-        é sempre tua.
-      </p>
-    </div>
+<div class="step">
+<strong>4. Fazemos a pesquisa</strong>
+<p>Procuramos informações relevantes para o teu pedido.</p>
+</div>
 
-  </div>
+<div class="step">
+<strong>5. Recebes os resultados</strong>
+<p>Enviamos as informações encontradas pelo WhatsApp.</p>
+</div>
+
+</div>
+
+<div class="notice">
+<strong>Importante:</strong>
+as informações encontradas devem ser verificadas pelo cliente
+antes de qualquer decisão, contratação ou pagamento a terceiros.
+</div>
+
 </section>
 
 <section id="pedir">
 
-  <h2 class="section-title">Pedir uma pesquisa</h2>
+<h2 class="section-title">Pedir uma pesquisa</h2>
 
-  <p class="section-subtitle">
-    Preenche o formulário e envia o pedido pelo WhatsApp.
-  </p>
+<p class="section-subtitle">
+Preenche os dados e envia o pedido pelo WhatsApp.
+</p>
 
-  <div class="form-box">
+<div class="form-box">
 
-    <label for="nome">Teu nome</label>
-    <input id="nome" type="text" placeholder="Ex.: João">
+<label for="nome">Teu nome</label>
+<input id="nome" type="text" placeholder="Ex.: João">
 
-    <label for="categoria">O que procuras?</label>
+<label for="telefone">Teu número de WhatsApp</label>
+<input id="telefone" type="tel" placeholder="Ex.: 949 000 000">
 
-    <select id="categoria">
-      <option value="">Seleciona uma categoria</option>
-      <option>Emprego</option>
-      <option>Curso ou formação</option>
-      <option>Empresa ou serviço</option>
-      <option>Documento ou procedimento</option>
-      <option>Negócio ou fornecedor</option>
-      <option>Pesquisa personalizada</option>
-    </select>
+<label for="categoria">Tipo de pesquisa</label>
 
-    <label for="pedido">Explica o que precisas</label>
+<select id="categoria">
+<option value="">Seleciona uma categoria</option>
+<option>Emprego</option>
+<option>Curso ou formação</option>
+<option>Empresa ou serviço</option>
+<option>Documento ou procedimento</option>
+<option>Negócio ou fornecedor</option>
+<option>Pesquisa personalizada</option>
+</select>
 
-    <textarea
-      id="pedido"
-      placeholder="Escreve aqui o que queres que procuremos..."
-    ></textarea>
+<label for="local">Local / Província</label>
+<input id="local" type="text" placeholder="Ex.: Luanda, Bié, Benguela...">
 
-    <button onclick="enviarPedido()">
-      📲 ENVIAR PEDIDO PELO WHATSAPP
-    </button>
+<label for="pedido">Explica o que procuras</label>
 
-  </div>
+<textarea id="pedido" placeholder="Escreve aqui todos os detalhes possíveis..."></textarea>
+
+<button class="main-button" onclick="enviarPedido()">
+📲 ENVIAR PEDIDO PELO WHATSAPP
+</button>
+
+</div>
+
 </section>
 
 <section id="pagamento">
 
-  <h2 class="section-title">Pagamento</h2>
+<h2 class="section-title">Pagamento</h2>
 
-  <p class="section-subtitle">
-    Quando o serviço exigir pagamento, podes usar Xpress.
-  </p>
+<p class="section-subtitle">
+Quando o serviço tiver custo, o pagamento pode ser feito por Xpress.
+</p>
 
-  <div class="payment">
+<div class="payment">
 
-    <h3>💳 Xpress</h3>
+<h3>💳 Xpress</h3>
 
-    <p>Envia o pagamento para:</p>
+<p>Enviar para o número:</p>
 
-    <div class="payment-number">
-      949 623 013
-    </div>
+<div class="payment-number">949 623 013</div>
 
-    <p>
-      Depois do pagamento, envia o comprovativo pelo WhatsApp
-      para confirmarmos o pedido.
-    </p>
+<button class="copy-btn" onclick="copiarNumero()">
+📋 COPIAR NÚMERO
+</button>
 
-    <p class="warning">
-      ⚠️ O valor do serviço será combinado antes da pesquisa.
-      Não envies dinheiro sem confirmar primeiro o valor.
-    </p>
+<p style="margin-top:18px">
+Antes de pagar, confirma connosco o valor do serviço.
+Depois envia o comprovativo pelo WhatsApp.
+</p>
 
-    <div class="buttons">
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/244949623013?text=Olá%2C%20quero%20confirmar%20um%20pagamento%20Xpress."
-        target="_blank"
-      >
-        ENVIAR COMPROVATIVO
-      </a>
-    </div>
+<p class="warning">
+⚠️ Não envies dinheiro sem confirmar primeiro o valor e o serviço.
+</p>
 
-  </div>
+<div class="buttons">
+
+<a class="btn btn-primary"
+href="https://wa.me/244949623013?text=Olá%2C%20quero%20confirmar%20o%20valor%20e%20o%20pagamento%20por%20Xpress."
+target="_blank">
+CONFIRMAR PAGAMENTO
+</a>
+
+<a class="btn btn-secondary"
+href="https://wa.me/244949623013?text=Olá%2C%20estou%20a%20enviar%20o%20comprovativo%20do%20pagamento%20Xpress."
+target="_blank">
+ENVIAR COMPROVATIVO
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <section>
 
-  <h2 class="section-title">Perguntas frequentes</h2>
+<h2 class="section-title">Perguntas frequentes</h2>
 
-  <div class="faq">
-    <strong>Vocês pesquisam qualquer coisa?</strong>
-    <p>
-      Analisamos cada pedido e informamos se conseguimos
-      realizar a pesquisa solicitada.
-    </p>
-  </div>
+<div class="faq">
+<strong>Vocês procuram qualquer informação?</strong>
+<p>Analisamos cada pedido e informamos se podemos realizar a pesquisa.</p>
+</div>
 
-  <div class="faq">
-    <strong>Como recebo a resposta?</strong>
-    <p>
-      Normalmente através do WhatsApp.
-    </p>
-  </div>
+<div class="faq">
+<strong>Quanto custa?</strong>
+<p>Depende do tipo e da complexidade do pedido. O valor é combinado antes do pagamento.</p>
+</div>
 
-  <div class="faq">
-    <strong>Quanto custa?</strong>
-    <p>
-      O preço depende do tipo e da complexidade da pesquisa.
-      O valor deve ser combinado antes do pagamento.
-    </p>
-  </div>
+<div class="faq">
+<strong>Como recebo a resposta?</strong>
+<p>Normalmente enviamos os resultados através do WhatsApp.</p>
+</div>
 
-  <div class="faq">
-    <strong>Posso fazer uma pergunta simples?</strong>
-    <p>
-      Sim. Envia o teu pedido e explicaremos como podemos ajudar.
-    </p>
-  </div>
+<div class="faq">
+<strong>Posso fazer uma pergunta simples?</strong>
+<p>Sim. Envia o pedido e veremos como podemos ajudar.</p>
+</div>
+
+<div class="faq">
+<strong>Vocês garantem que toda informação encontrada está correta?</strong>
+<p>Não. A pesquisa procura fontes e informações relevantes, mas informações de terceiros devem ser verificadas antes de decisões ou pagamentos.</p>
+</div>
 
 </section>
 
 <section id="contacto" class="contact">
 
-  <h2 class="section-title">Contacto</h2>
+<h2 class="section-title">Contacto</h2>
 
-  <p class="section-subtitle">
-    Fala diretamente connosco pelo WhatsApp.
-  </p>
+<p class="section-subtitle">
+Fala connosco diretamente pelo WhatsApp.
+</p>
 
-  <a
-    class="contact-number"
-    href="https://wa.me/244949623013"
-    target="_blank"
-  >
-    📱 949 623 013
-  </a>
+<a class="contact-number"
+href="https://wa.me/244949623013"
+target="_blank">
+📱 949 623 013
+</a>
 
-  <a
-    class="contact-number"
-    href="https://wa.me/244928455916"
-    target="_blank"
-  >
-    📱 928 455 916
-  </a>
+<a class="contact-number"
+href="https://wa.me/244928455916"
+target="_blank">
+📱 928 455 916
+</a>
+
+<p style="margin-top:18px;color:#aebfb7">
+WhatsApp principal: 949 623 013
+</p>
 
 </section>
 
 </main>
 
 <footer>
-  <p>
-    © 2026 NÓS RESOLVEMOS 100% DO QUE PROCURAS
-  </p>
 
-  <p>
-    Tu procuras. Nós encontramos.
-  </p>
+<p>© 2026 NÓS RESOLVEMOS 100% DO QUE PROCURAS</p>
+<p>Tu procuras. Nós encontramos.</p>
+
 </footer>
 
-<a
-  class="whatsapp"
-  href="https://wa.me/244949623013?text=Olá%2C%20preciso%20de%20ajuda%20para%20encontrar%20uma%20solução."
-  target="_blank"
-  aria-label="WhatsApp"
->
-  ☎
+<a class="whatsapp"
+href="https://wa.me/244949623013?text=Olá%2C%20preciso%20de%20ajuda%20para%20encontrar%20uma%20solução."
+target="_blank"
+aria-label="WhatsApp">
+☎
+</a>
+
+<a class="top"
+id="topButton"
+href="#top"
+aria-label="Voltar ao topo">
+↑
 </a>
 
 <script>
 
 const NUMERO_PRINCIPAL = "244949623013";
+const NUMERO_XPRESS = "949623013";
+
+function servico(tipo){
+
+const mensagem =
+`Olá! Quero solicitar uma pesquisa.
+
+Serviço: ${tipo}
+
+Gostaria de saber como funciona e qual é o valor do serviço.
+
+Vim através do site "NÓS RESOLVEMOS 100% DO QUE PROCURAS".`;
+
+window.open(
+"https://wa.me/" +
+NUMERO_PRINCIPAL +
+"?text=" +
+encodeURIComponent(mensagem),
+"_blank"
+);
+
+}
 
 function enviarPedido(){
 
-  const nome =
-    document.getElementById("nome").value.trim();
+const nome =
+document.getElementById("nome").value.trim();
 
-  const categoria =
-    document.getElementById("categoria").value;
+const telefone =
+document.getElementById("telefone").value.trim();
 
-  const pedido =
-    document.getElementById("pedido").value.trim();
+const categoria =
+document.getElementById("categoria").value;
 
-  if(!nome){
-    alert("Por favor, coloca o teu nome.");
-    return;
-  }
+const local =
+document.getElementById("local").value.trim();
 
-  if(!categoria){
-    alert("Seleciona o tipo de pesquisa.");
-    return;
-  }
+const pedido =
+document.getElementById("pedido").value.trim();
 
-  if(!pedido){
-    alert("Explica o que precisas procurar.");
-    return;
-  }
+if(!nome){
+alert("Coloca o teu nome.");
+return;
+}
 
-  const mensagem =
-`Olá! Quero pedir uma pesquisa.
+if(!categoria){
+alert("Seleciona o tipo de pesquisa.");
+return;
+}
+
+if(!pedido){
+alert("Explica o que procuras.");
+return;
+}
+
+const mensagem =
+`Olá! Quero fazer um pedido de pesquisa.
 
 Nome: ${nome}
 
+Meu WhatsApp: ${telefone || "Não informado"}
+
 Categoria: ${categoria}
+
+Local/Província: ${local || "Não informado"}
 
 O que procuro:
 ${pedido}
 
 Vim através do site "NÓS RESOLVEMOS 100% DO QUE PROCURAS".`;
 
-  const url =
-    "https://wa.me/" +
-    NUMERO_PRINCIPAL +
-    "?text=" +
-    encodeURIComponent(mensagem);
+window.open(
+"https://wa.me/" +
+NUMERO_PRINCIPAL +
+"?text=" +
+encodeURIComponent(mensagem),
+"_blank"
+);
 
-  window.open(url, "_blank");
 }
+
+function copiarNumero(){
+
+if(navigator.clipboard){
+
+navigator.clipboard.writeText(NUMERO_XPRESS)
+.then(function(){
+alert("Número Xpress copiado: 949 623 013");
+})
+.catch(function(){
+alert("Número Xpress: 949 623 013");
+});
+
+}else{
+
+alert("Número Xpress: 949 623 013");
+
+}
+
+}
+
+function partilharSite(){
+
+if(navigator.share){
+
+navigator.share({
+title:"NÓS RESOLVEMOS 100% DO QUE PROCURAS",
+text:"Tu procuras. Nós encontramos.",
+url:window.location.href
+});
+
+}else{
+
+if(navigator.clipboard){
+
+navigator.clipboard.writeText(window.location.href)
+.then(function(){
+alert("Link do site copiado. Agora podes enviá-lo onde quiseres.");
+})
+.catch(function(){
+prompt("Copia o link do site:",window.location.href);
+});
+
+}else{
+
+prompt("Copia o link do site:",window.location.href);
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",function(){
+
+const botao =
+document.getElementById("topButton");
+
+if(window.scrollY > 400){
+botao.style.display="flex";
+}else{
+botao.style.display="none";
+}
+
+});
 
 </script>
 
 </body>
-  </html>
+</html>
