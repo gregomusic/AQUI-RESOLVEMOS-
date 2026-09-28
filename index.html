@@ -6,7 +6,8 @@
 
 <title>NÓS RESOLVEMOS 100% DO QUE PROCURAS</title>
 
-<meta name="description" content="Pesquisaste. Nós encontramos. Encontre empregos, cursos, empresas, serviços, documentos, negócios e outras soluções em Angola.">
+<meta name="description" content="Tu procuras. Nós encontramos. Pesquisamos empregos, cursos, empresas, serviços, documentos, negócios e outras soluções.">
+
 <meta name="theme-color" content="#07140d">
 
 <style>
@@ -14,14 +15,13 @@
   --verde:#00ff66;
   --verde2:#00c853;
   --fundo:#07100b;
-  --fundo2:#0c1711;
+  --fundo2:#0d1811;
   --card:#101d15;
-  --card2:#14251b;
-  --texto:#f4fff7;
+  --texto:#f5fff8;
   --cinza:#aab8af;
   --borda:rgba(0,255,102,.18);
-  --perigo:#ff5757;
-  --amarelo:#ffd166;
+  --erro:#ff5c5c;
+  --aviso:#ffd166;
 }
 
 *{
@@ -71,7 +71,7 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,16,11,.95);
+  background:rgba(7,16,11,.96);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--borda);
 }
@@ -85,23 +85,23 @@ header{
 }
 
 .logo{
-  font-size:19px;
-  font-weight:900;
   color:var(--verde);
-  letter-spacing:.5px;
+  font-size:18px;
+  font-weight:900;
+  line-height:1.2;
 }
 
 .logo small{
   display:block;
   color:#fff;
-  font-size:10px;
-  font-weight:500;
+  font-size:9px;
   letter-spacing:1px;
+  margin-top:3px;
 }
 
 nav{
   display:flex;
-  gap:7px;
+  gap:5px;
   flex-wrap:wrap;
   justify-content:flex-end;
 }
@@ -111,12 +111,11 @@ nav a{
   border-radius:8px;
   color:#dce8df;
   font-size:13px;
-  transition:.2s;
 }
 
 nav a:hover{
-  background:rgba(0,255,102,.10);
   color:var(--verde);
+  background:rgba(0,255,102,.08);
 }
 
 /* HERO */
@@ -128,7 +127,7 @@ nav a:hover{
 
 .badge{
   display:inline-block;
-  padding:7px 13px;
+  padding:7px 14px;
   border:1px solid var(--borda);
   border-radius:30px;
   color:var(--verde);
@@ -138,10 +137,10 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:clamp(35px,8vw,68px);
-  line-height:1.05;
   max-width:900px;
   margin:auto;
+  font-size:clamp(38px,8vw,68px);
+  line-height:1.05;
 }
 
 .hero h1 span{
@@ -158,8 +157,8 @@ nav a:hover{
 .hero-buttons{
   display:flex;
   justify-content:center;
-  gap:12px;
   flex-wrap:wrap;
+  gap:12px;
   margin-top:28px;
 }
 
@@ -167,10 +166,10 @@ nav a:hover{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border:none;
   border-radius:10px;
   padding:13px 20px;
   font-weight:800;
+  border:none;
   transition:.2s;
 }
 
@@ -230,7 +229,7 @@ section{
   border-color:rgba(0,255,102,.45);
 }
 
-.service .icon{
+.icon{
   font-size:35px;
   margin-bottom:10px;
 }
@@ -249,8 +248,8 @@ section{
   background:transparent;
   color:var(--verde);
   border:1px solid var(--borda);
-  padding:9px 13px;
   border-radius:8px;
+  padding:9px 13px;
 }
 
 /* COMO FUNCIONA */
@@ -262,11 +261,11 @@ section{
 }
 
 .step{
-  text-align:center;
   background:var(--card);
   border:1px solid var(--borda);
-  padding:20px 13px;
   border-radius:14px;
+  padding:20px 13px;
+  text-align:center;
 }
 
 .step-number{
@@ -292,11 +291,10 @@ section{
 .request-box{
   max-width:760px;
   margin:auto;
-  background:linear-gradient(145deg,var(--card),var(--card2));
+  background:linear-gradient(145deg,var(--card),#132018);
   border:1px solid var(--borda);
   border-radius:20px;
   padding:28px;
-  box-shadow:0 20px 70px rgba(0,0,0,.25);
 }
 
 .form-grid{
@@ -318,18 +316,17 @@ section{
   margin-bottom:7px;
   font-size:13px;
   font-weight:700;
-  color:#dce8df;
 }
 
 .field input,
 .field select,
 .field textarea{
   width:100%;
+  padding:13px;
+  border-radius:10px;
   border:1px solid rgba(255,255,255,.10);
   background:#08110c;
   color:#fff;
-  border-radius:10px;
-  padding:13px;
   outline:none;
 }
 
@@ -346,36 +343,35 @@ section{
 }
 
 .help{
-  font-size:12px;
   color:#84948a;
+  font-size:12px;
   margin-top:6px;
 }
 
 .submit-btn{
   width:100%;
-  background:var(--verde);
-  color:#001507;
+  padding:15px;
   border:none;
   border-radius:10px;
-  padding:15px;
+  background:var(--verde);
+  color:#001507;
   font-size:16px;
   font-weight:900;
 }
 
 .submit-btn:disabled{
   opacity:.55;
-  cursor:not-allowed;
 }
 
-/* RESULTADO */
+/* STATUS */
 
 .status{
   display:none;
   margin-top:20px;
   padding:16px;
   border-radius:12px;
-  border:1px solid var(--borda);
   background:#08130d;
+  border:1px solid var(--borda);
 }
 
 .status.show{
@@ -383,11 +379,11 @@ section{
 }
 
 .status.success{
-  border-color:rgba(0,255,102,.4);
+  border-color:rgba(0,255,102,.45);
 }
 
 .status.error{
-  border-color:rgba(255,87,87,.5);
+  border-color:rgba(255,92,92,.5);
 }
 
 .status.loading{
@@ -405,22 +401,24 @@ section{
 }
 
 .answer{
+  display:none;
   margin-top:15px;
+  padding:18px;
+  border-radius:12px;
   background:#050b07;
   border:1px solid rgba(0,255,102,.18);
-  border-radius:12px;
-  padding:18px;
-  white-space:pre-wrap;
-  word-wrap:break-word;
   color:#f0fff4;
+  white-space:pre-wrap;
+  word-break:break-word;
   font-size:14px;
   line-height:1.7;
 }
 
 .request-id{
+  display:none;
   margin-top:10px;
-  font-size:12px;
   color:#7f9186;
+  font-size:12px;
 }
 
 /* PAGAMENTO */
@@ -429,17 +427,17 @@ section{
   max-width:700px;
   margin:auto;
   text-align:center;
+  padding:30px;
+  border-radius:18px;
   background:linear-gradient(145deg,#102018,#0a130e);
   border:1px solid var(--borda);
-  border-radius:18px;
-  padding:30px;
 }
 
 .xpress{
+  margin:12px 0;
+  color:var(--verde);
   font-size:32px;
   font-weight:900;
-  color:var(--verde);
-  margin:12px 0;
 }
 
 .payment p{
@@ -464,11 +462,11 @@ section{
 }
 
 details{
+  margin-bottom:10px;
+  padding:16px;
+  border-radius:12px;
   background:var(--card);
   border:1px solid var(--borda);
-  border-radius:12px;
-  padding:16px;
-  margin-bottom:10px;
 }
 
 summary{
@@ -477,8 +475,8 @@ summary{
 }
 
 details p{
-  color:var(--cinza);
   margin-top:10px;
+  color:var(--cinza);
   font-size:14px;
 }
 
@@ -491,16 +489,16 @@ details p{
 .contact-buttons{
   display:flex;
   justify-content:center;
-  gap:12px;
   flex-wrap:wrap;
+  gap:12px;
   margin-top:20px;
 }
 
 /* FOOTER */
 
 footer{
-  border-top:1px solid var(--borda);
   padding:30px 0;
+  border-top:1px solid var(--borda);
   text-align:center;
   color:#7e8d84;
   font-size:13px;
@@ -539,12 +537,15 @@ footer{
   color:var(--verde);
   border:1px solid var(--borda);
   display:none;
+  align-items:center;
+  justify-content:center;
   z-index:999;
 }
 
-/* RESPONSIVO */
+/* MOBILE */
 
 @media(max-width:850px){
+
   .services{
     grid-template-columns:repeat(2,1fr);
   }
@@ -559,9 +560,9 @@ footer{
 }
 
 @media(max-width:650px){
+
   .header-inner{
     padding:12px 0;
-    align-items:flex-start;
   }
 
   nav{
@@ -601,6 +602,7 @@ footer{
 
 <header>
   <div class="container header-inner">
+
     <a href="#inicio" class="logo">
       NÓS RESOLVEMOS
       <small>100% DO QUE PROCURAS</small>
@@ -614,16 +616,20 @@ footer{
       <a href="#pagamento">Pagamento</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
 <!-- INÍCIO -->
+
 <section id="inicio" class="hero">
   <div class="container">
 
-    <div class="badge">🇦🇴 Serviço de pesquisa para Angola</div>
+    <div class="badge">
+      🇦🇴 Serviço de pesquisa para Angola
+    </div>
 
     <h1>
       Tu procuras.<br>
@@ -636,6 +642,7 @@ footer{
     </p>
 
     <div class="hero-buttons">
+
       <a href="#pedir" class="btn btn-primary">
         🔎 Fazer uma pesquisa
       </a>
@@ -643,18 +650,24 @@ footer{
       <a href="#servicos" class="btn btn-secondary">
         Ver serviços
       </a>
+
     </div>
 
   </div>
 </section>
 
+
 <!-- SERVIÇOS -->
+
 <section id="servicos">
+
   <div class="container">
 
     <div class="section-title">
       <h2>O que procuramos?</h2>
-      <p>Escolhe uma categoria ou descreve exatamente o que precisas.</p>
+      <p>
+        Escolhe uma categoria ou descreve exactamente o que precisas.
+      </p>
     </div>
 
     <div class="services">
@@ -674,7 +687,7 @@ footer{
         <div class="icon">🎓</div>
         <h3>Cursos e formações</h3>
         <p>
-          Procuramos cursos, bolsas, formações e oportunidades de aprendizagem.
+          Procuramos cursos, bolsas e oportunidades de formação.
         </p>
         <button onclick="servico('Curso ou formação')">
           Procurar curso
@@ -696,7 +709,7 @@ footer{
         <div class="icon">📄</div>
         <h3>Documentos</h3>
         <p>
-          Procuramos informações sobre documentos, requisitos e procedimentos.
+          Procuramos informações sobre documentos e procedimentos.
         </p>
         <button onclick="servico('Documento')">
           Procurar documento
@@ -707,7 +720,7 @@ footer{
         <div class="icon">💰</div>
         <h3>Negócios</h3>
         <p>
-          Procuramos oportunidades de negócio, fornecedores e ideias.
+          Procuramos oportunidades de negócio e fornecedores.
         </p>
         <button onclick="servico('Negócio')">
           Procurar negócio
@@ -726,16 +739,24 @@ footer{
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+
 <!-- COMO FUNCIONA -->
+
 <section id="como">
+
   <div class="container">
 
     <div class="section-title">
       <h2>Como funciona?</h2>
-      <p>O processo foi pensado para funcionar mesmo quando não estamos online.</p>
+      <p>
+        O sistema pode continuar a processar os pedidos mesmo quando
+        o responsável não está online.
+      </p>
     </div>
 
     <div class="steps">
@@ -743,47 +764,64 @@ footer{
       <div class="step">
         <div class="step-number">1</div>
         <h3>Tu pedes</h3>
-        <p>Preenches o formulário com aquilo que procuras.</p>
+        <p>
+          Preenches o formulário.
+        </p>
       </div>
 
       <div class="step">
         <div class="step-number">2</div>
         <h3>Registamos</h3>
-        <p>O pedido é guardado automaticamente.</p>
+        <p>
+          O pedido é guardado automaticamente.
+        </p>
       </div>
 
       <div class="step">
         <div class="step-number">3</div>
         <h3>A IA pesquisa</h3>
-        <p>O sistema pesquisa informações relevantes na internet.</p>
+        <p>
+          O sistema procura informações relevantes.
+        </p>
       </div>
 
       <div class="step">
         <div class="step-number">4</div>
-        <h3>Recebes a resposta</h3>
-        <p>A resposta aparece automaticamente no site.</p>
+        <h3>Resposta</h3>
+        <p>
+          A resposta aparece automaticamente.
+        </p>
       </div>
 
       <div class="step">
         <div class="step-number">5</div>
-        <h3>Confirmas</h3>
-        <p>Quando necessário, confirmas os detalhes diretamente com a entidade.</p>
+        <h3>Confirmação</h3>
+        <p>
+          Quando necessário, confirma os dados com a entidade.
+        </p>
       </div>
 
     </div>
 
   </div>
+
 </section>
 
-<!-- PEDIR -->
+
+<!-- PEDIDO -->
+
 <section id="pedir">
+
   <div class="container">
 
     <div class="section-title">
+
       <h2>Faz o teu pedido</h2>
+
       <p>
         Quanto mais detalhes forneceres, mais específica poderá ser a pesquisa.
       </p>
+
     </div>
 
     <div class="request-box">
@@ -793,154 +831,229 @@ footer{
         <div class="form-grid">
 
           <div class="field">
-            <label for="nome">Nome</label>
+
+            <label for="nome">
+              Nome
+            </label>
+
             <input
               id="nome"
-              name="nome"
               type="text"
               placeholder="O teu nome"
               maxlength="100"
               autocomplete="name"
               required
             >
+
           </div>
 
+
           <div class="field">
-            <label for="telefone">Telefone / WhatsApp</label>
+
+            <label for="telefone">
+              Telefone / WhatsApp
+            </label>
+
             <input
               id="telefone"
-              name="telefone"
               type="tel"
               placeholder="Ex.: 949623013"
               maxlength="30"
               autocomplete="tel"
               required
             >
+
           </div>
 
-          <div class="field">
-            <label for="categoria">O que procuras?</label>
 
-            <select id="categoria" name="categoria" required>
-              <option value="">Seleciona uma categoria</option>
-              <option value="Emprego">💼 Emprego</option>
-              <option value="Curso ou formação">🎓 Curso ou formação</option>
-              <option value="Empresa ou serviço">🏢 Empresa ou serviço</option>
-              <option value="Documento">📄 Documento</option>
-              <option value="Negócio">💰 Negócio</option>
-              <option value="Pesquisa personalizada">🔎 Pesquisa personalizada</option>
-              <option value="Outro">📌 Outro</option>
+          <div class="field">
+
+            <label for="categoria">
+              O que procuras?
+            </label>
+
+            <select id="categoria" required>
+
+              <option value="">
+                Seleciona uma categoria
+              </option>
+
+              <option value="Emprego">
+                💼 Emprego
+              </option>
+
+              <option value="Curso ou formação">
+                🎓 Curso ou formação
+              </option>
+
+              <option value="Empresa ou serviço">
+                🏢 Empresa ou serviço
+              </option>
+
+              <option value="Documento">
+                📄 Documento
+              </option>
+
+              <option value="Negócio">
+                💰 Negócio
+              </option>
+
+              <option value="Pesquisa personalizada">
+                🔎 Pesquisa personalizada
+              </option>
+
+              <option value="Outro">
+                📌 Outro
+              </option>
+
             </select>
+
           </div>
 
+
           <div class="field">
-            <label for="local">Localização</label>
+
+            <label for="local">
+              Localização
+            </label>
 
             <input
               id="local"
-              name="local"
               type="text"
               placeholder="Província / cidade / país"
               maxlength="100"
               autocomplete="address-level1"
             >
+
           </div>
 
+
           <div class="field full">
-            <label for="pedido">O que exatamente procuras?</label>
+
+            <label for="pedido">
+              O que exactamente procuras?
+            </label>
 
             <textarea
               id="pedido"
-              name="pedido"
-              placeholder="Ex.: Procuro cursos de soldadura disponíveis no Bié, presenciais ou online, com contactos e preço se estiver disponível."
+              placeholder="Ex.: Procuro cursos de soldadura no Bié, presenciais ou online, com contactos e preço se estiver disponível."
               maxlength="3000"
               required
             ></textarea>
 
             <div class="help">
-              Escreve todos os detalhes que souberes. Não coloques palavras-passe ou dados bancários.
+              Não coloques palavras-passe, PINs ou dados bancários.
             </div>
+
           </div>
 
         </div>
 
-        <!-- CAMPO ANTI-SPAM -->
+
+        <!-- ANTI-SPAM -->
+
         <input
-          type="text"
           id="website"
-          name="website"
+          type="text"
           autocomplete="off"
           tabindex="-1"
           style="position:absolute;left:-9999px;opacity:0;"
-          aria-hidden="true"
         >
 
+
         <button
-          type="submit"
           id="enviarBtn"
           class="submit-btn"
+          type="submit"
         >
           🔎 ENVIAR PEDIDO E PESQUISAR
         </button>
 
       </form>
 
+
+      <!-- RESULTADO -->
+
       <div id="statusBox" class="status">
-        <div id="statusTitle" class="status-title"></div>
-        <div id="statusText" class="status-text"></div>
+
+        <div
+          id="statusTitle"
+          class="status-title"
+        ></div>
+
+        <div
+          id="statusText"
+          class="status-text"
+        ></div>
 
         <div
           id="aiAnswer"
           class="answer"
-          style="display:none;"
         ></div>
 
         <div
           id="requestId"
           class="request-id"
-          style="display:none;"
         ></div>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
+
 <!-- PAGAMENTO -->
+
 <section id="pagamento">
+
   <div class="container">
 
     <div class="section-title">
+
       <h2>Pagamento</h2>
-      <p>Algumas pesquisas podem ter custo dependendo do serviço solicitado.</p>
+
+      <p>
+        Algumas pesquisas podem ter custo dependendo do serviço solicitado.
+      </p>
+
     </div>
 
     <div class="payment">
 
-      <div>Pagamento por Xpress</div>
+      <div>
+        Pagamento por Xpress
+      </div>
 
       <div class="xpress">
         949 623 013
       </div>
 
       <p>
-        Antes de efectuar qualquer pagamento, confirma primeiro
-        connosco o valor e o serviço.
+        Antes de efectuar qualquer pagamento,
+        confirma primeiro o valor e o serviço.
       </p>
 
       <div class="warning">
-        ⚠️ Não envies dinheiro sem confirmar primeiro o valor do serviço.
-        Depois do pagamento, guarda o comprovativo.
+
+        ⚠️ Não envies dinheiro sem confirmar primeiro
+        o valor do serviço.
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
+
 <!-- FAQ -->
+
 <section>
+
   <div class="container">
 
     <div class="section-title">
@@ -950,58 +1063,95 @@ footer{
     <div class="faq">
 
       <details>
-        <summary>Preciso esperar o responsável estar online?</summary>
+
+        <summary>
+          Preciso esperar o responsável estar online?
+        </summary>
+
         <p>
-          Não. O pedido é enviado para o servidor e o processamento automático
-          pode continuar mesmo quando o responsável não estiver online.
+          Não. O pedido é enviado para o servidor e o sistema
+          pode processá-lo automaticamente.
         </p>
+
       </details>
 
-      <details>
-        <summary>A resposta da IA é sempre garantida?</summary>
-        <p>
-          Não. A IA procura informações e organiza os resultados, mas algumas
-          informações podem mudar. Sempre que possível, confirma os dados
-          directamente com a entidade responsável.
-        </p>
-      </details>
 
       <details>
-        <summary>Posso procurar qualquer coisa?</summary>
+
+        <summary>
+          A IA garante que todas as informações estão correctas?
+        </summary>
+
         <p>
-          Podes fazer pesquisas dentro das categorias disponíveis e também
-          usar a opção de pesquisa personalizada.
+          Não. As informações encontradas devem ser verificadas,
+          principalmente empregos, preços, concursos, contactos
+          e prazos.
         </p>
+
       </details>
 
-      <details>
-        <summary>O formulário guarda o que escrevi?</summary>
-        <p>
-          Sim. O site guarda temporariamente o rascunho no teu dispositivo
-          para evitar que percas tudo se fechares ou actualizares a página.
-        </p>
-      </details>
 
       <details>
-        <summary>Posso falar directamente com vocês?</summary>
+
+        <summary>
+          Posso procurar qualquer coisa?
+        </summary>
+
         <p>
-          Sim. Podes entrar em contacto através dos números de WhatsApp
-          apresentados abaixo.
+          Podes usar as categorias disponíveis ou fazer uma
+          pesquisa personalizada.
         </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          O formulário guarda o meu pedido?
+        </summary>
+
+        <p>
+          O site guarda temporariamente um rascunho no dispositivo
+          para evitar perda de informação antes do envio.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Posso falar directamente com vocês?
+        </summary>
+
+        <p>
+          Sim. Usa um dos números de WhatsApp apresentados abaixo.
+        </p>
+
       </details>
 
     </div>
 
   </div>
+
 </section>
 
+
 <!-- CONTACTO -->
+
 <section id="contacto">
+
   <div class="container">
 
     <div class="section-title">
+
       <h2>Contacto</h2>
-      <p>Se precisares de ajuda directa, fala connosco pelo WhatsApp.</p>
+
+      <p>
+        Precisas de ajuda directa? Fala connosco.
+      </p>
+
     </div>
 
     <div class="contact">
@@ -1028,44 +1178,50 @@ footer{
 
       </div>
 
+
       <div style="margin-top:20px;">
+
         <button
           class="btn btn-secondary"
           onclick="partilharSite()"
         >
           📤 Partilhar este serviço
         </button>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 </main>
 
+
 <footer>
+
   <div class="container">
-    <strong>NÓS RESOLVEMOS 100% DO QUE PROCURAS</strong>
+
+    <strong>
+      NÓS RESOLVEMOS 100% DO QUE PROCURAS
+    </strong>
+
     <br>
+
     Tu procuras. Nós encontramos.
+
     <br><br>
+
     © <span id="ano"></span> — Todos os direitos reservados.
+
   </div>
+
 </footer>
+
+
+<!-- WHATSAPP -->
 
 <a
   class="whatsapp"
-  href="https://wa.me/244949623013"
-  target="_blank"
-  rel="noopener"
-  aria-label="WhatsApp"
->
-  ☎
-</a>
-
-<button
-  id="topBtn"
-  class="top"
-  onclick="window.scrollTo({top:0,behavior:'smooth'})"
-  aria-label="Voltar 
+  href="https://wa.me/24494
