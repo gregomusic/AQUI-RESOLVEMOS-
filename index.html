@@ -239,6 +239,11 @@ font-weight:bold;
 font-size:16px;
 }
 
+.main-button:disabled{
+opacity:.6;
+cursor:wait;
+}
+
 .payment{
 text-align:center;
 background:linear-gradient(135deg,#073a28,#0b1f17);
@@ -299,6 +304,29 @@ border-radius:8px;
 margin-top:20px;
 color:#d4e4dd;
 font-size:14px;
+}
+
+.status-box{
+display:none;
+margin-top:18px;
+padding:15px;
+border-radius:10px;
+font-size:14px;
+text-align:center;
+}
+
+.status-success{
+display:block;
+background:#123d28;
+border:1px solid #20e878;
+color:#dffff0;
+}
+
+.status-error{
+display:block;
+background:#3d1717;
+border:1px solid #ff6666;
+color:#ffe0e0;
 }
 
 footer{
@@ -465,7 +493,7 @@ Escolhe um serviço para iniciar o teu pedido.
 <h2 class="section-title">Como funciona?</h2>
 
 <p class="section-subtitle">
-Um processo simples através do WhatsApp.
+Um processo simples através do nosso sistema.
 </p>
 
 <div class="steps">
@@ -476,13 +504,13 @@ Um processo simples através do WhatsApp.
 </div>
 
 <div class="step">
-<strong>2. Nós analisamos</strong>
-<p>Verificamos o pedido e informamos o que podemos fazer.</p>
+<strong>2. O sistema recebe</strong>
+<p>O teu pedido é registado automaticamente no nosso sistema.</p>
 </div>
 
 <div class="step">
-<strong>3. Combinamos o serviço</strong>
-<p>Quando houver custo, o valor é informado antes do pagamento.</p>
+<strong>3. Analisamos</strong>
+<p>Verificamos o pedido e informamos o que podemos fazer.</p>
 </div>
 
 <div class="step">
@@ -492,7 +520,7 @@ Um processo simples através do WhatsApp.
 
 <div class="step">
 <strong>5. Recebes os resultados</strong>
-<p>Enviamos as informações encontradas pelo WhatsApp.</p>
+<p>Os resultados serão enviados pelo canal combinado.</p>
 </div>
 
 </div>
@@ -510,7 +538,7 @@ antes de qualquer decisão, contratação ou pagamento a terceiros.
 <h2 class="section-title">Pedir uma pesquisa</h2>
 
 <p class="section-subtitle">
-Preenche os dados e envia o pedido pelo WhatsApp.
+Preenche os dados e envia o pedido para o nosso sistema.
 </p>
 
 <div class="form-box">
@@ -540,9 +568,11 @@ Preenche os dados e envia o pedido pelo WhatsApp.
 
 <textarea id="pedido" placeholder="Escreve aqui todos os detalhes possíveis..."></textarea>
 
-<button class="main-button" onclick="enviarPedido()">
-📲 ENVIAR PEDIDO PELO WHATSAPP
+<button id="enviarBtn" class="main-button" onclick="enviarPedido()">
+📲 ENVIAR PEDIDO
 </button>
+
+<div id="statusBox" class="status-box"></div>
 
 </div>
 
@@ -613,7 +643,7 @@ ENVIAR COMPROVATIVO
 
 <div class="faq">
 <strong>Como recebo a resposta?</strong>
-<p>Normalmente enviamos os resultados através do WhatsApp.</p>
+<p>Normalmente os resultados serão enviados através do WhatsApp.</p>
 </div>
 
 <div class="faq">
@@ -682,6 +712,13 @@ aria-label="Voltar ao topo">
 const NUMERO_PRINCIPAL = "244949623013";
 const NUMERO_XPRESS = "949623013";
 
+/*
+ * ENDEREÇO DO NOSSO BACKEND SUPABASE
+ */
+const BACKEND_URL =
+"https://biirfrcetsogqcbimhcg.supabase.co/functions/v1/smart-worker";
+
+
 function servico(tipo){
 
 const mensagem =
@@ -703,7 +740,14 @@ encodeURIComponent(mensagem),
 
 }
 
-function enviarPedido(){
+
+async function enviarPedido(){
+
+const botao =
+document.getElementById("enviarBtn");
+
+const status =
+document.getElementById("statusBox");
 
 const nome =
 document.getElementById("nome").value.trim();
@@ -720,92 +764,248 @@ document.getElementById("local").value.trim();
 const pedido =
 document.getElementById("pedido").value.trim();
 
+
+status.className = "status-box";
+status.innerHTML = "";
+
+
 if(!nome){
+
 alert("Coloca o teu nome.");
 return;
+
+}
+
+if(!telefone){
+
+alert("Coloca o teu número de WhatsApp.");
+return;
+
 }
 
 if(!categoria){
+
 alert("Seleciona o tipo de pesquisa.");
 return;
+
 }
 
 if(!pedido){
+
 alert("Explica o que procuras.");
 return;
+
 }
 
-const mensagem =
-`Olá! Quero fazer um pedido de pesquisa.
+
+botao.disabled = true;
+botao.innerText = "⏳ A ENVIAR PEDIDO...";
+
+
+try{
+
+const resposta =
+await fetch(BACKEND_URL,{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+client_name:nome,
+
+client_phone:telefone,
+
+category:categoria,
+
+province:local,
+
+city:null,
+
+request_text:pedido
+
+})
+
+});
+
+
+let dados = null;
+
+try{
+dados = await resposta.json();
+}catch(e){
+dados = null;
+}
+
+
+if(!resposta.ok || !dados || !dados.success){
+
+throw new Error(
+dados && dados.message
+? dados.message
+: "O servidor não aceitou o pedido."
+);
+
+}
+
+
+status.className =
+"status-box status-success";
+
+status.innerHTML =
+"✅ <strong>Pedido recebido com sucesso!</strong><br><br>" +
+"Pedido nº <strong>" +
+dados.request_id +
+"</strong><br>" +
+"Já está registado no nosso sistema.";
+
+
+document.getElementById("pedido").value = "";
+
+
+/*
+ * Depois de guardar no sistema,
+ * abrimos também o WhatsApp para o cliente
+ * poder avisar o contacto principal.
+ */
+
+const mensagemWhatsApp =
+`Olá! Acabei de enviar um pedido pelo site.
+
+Pedido nº: ${dados.request_id}
 
 Nome: ${nome}
 
-Meu WhatsApp: ${telefone || "Não informado"}
-
 Categoria: ${categoria}
 
-Local/Província: ${local || "Não informado"}
+Pedido:
+${pedido}`;
 
-O que procuro:
-${pedido}
-
-Vim através do site "NÓS RESOLVEMOS 100% DO QUE PROCURAS".`;
+setTimeout(function(){
 
 window.open(
 "https://wa.me/" +
 NUMERO_PRINCIPAL +
 "?text=" +
-encodeURIComponent(mensagem),
+encodeURIComponent(mensagemWhatsApp),
 "_blank"
 );
 
+},800);
+
+
+}catch(erro){
+
+console.error(erro);
+
+status.className =
+"status-box status-error";
+
+status.innerHTML =
+"❌ <strong>Não foi possível registar o pedido agora.</strong><br><br>" +
+"Verifica a ligação à internet e tenta novamente.";
+
+alert(
+"Não foi possível enviar o pedido ao sistema.\n\n" +
+"Se o problema continuar, fala connosco pelo WhatsApp."
+);
+
+}finally{
+
+botao.disabled = false;
+
+botao.innerText =
+"📲 ENVIAR PEDIDO";
+
 }
+
+}
+
 
 function copiarNumero(){
 
 if(navigator.clipboard){
 
 navigator.clipboard.writeText(NUMERO_XPRESS)
+
 .then(function(){
-alert("Número Xpress copiado: 949 623 013");
+
+alert(
+"Número Xpress copiado: 949 623 013"
+);
+
 })
+
 .catch(function(){
-alert("Número Xpress: 949 623 013");
+
+alert(
+"Número Xpress: 949 623 013"
+);
+
 });
 
 }else{
 
-alert("Número Xpress: 949 623 013");
+alert(
+"Número Xpress: 949 623 013"
+);
 
 }
 
 }
+
 
 function partilharSite(){
 
 if(navigator.share){
 
 navigator.share({
-title:"NÓS RESOLVEMOS 100% DO QUE PROCURAS",
-text:"Tu procuras. Nós encontramos.",
-url:window.location.href
+
+title:
+"NÓS RESOLVEMOS 100% DO QUE PROCURAS",
+
+text:
+"Tu procuras. Nós encontramos.",
+
+url:
+window.location.href
+
 });
 
 }else{
 
 if(navigator.clipboard){
 
-navigator.clipboard.writeText(window.location.href)
+navigator.clipboard.writeText(
+window.location.href
+)
+
 .then(function(){
-alert("Link do site copiado. Agora podes enviá-lo onde quiseres.");
+
+alert(
+"Link do site copiado. Agora podes enviá-lo onde quiseres."
+);
+
 })
+
 .catch(function(){
-prompt("Copia o link do site:",window.location.href);
+
+prompt(
+"Copia o link do site:",
+window.location.href
+);
+
 });
 
 }else{
 
-prompt("Copia o link do site:",window.location.href);
+prompt(
+"Copia o link do site:",
+window.location.href
+);
 
 }
 
@@ -813,15 +1013,22 @@ prompt("Copia o link do site:",window.location.href);
 
 }
 
-window.addEventListener("scroll",function(){
+
+window.addEventListener(
+"scroll",
+function(){
 
 const botao =
 document.getElementById("topButton");
 
 if(window.scrollY > 400){
-botao.style.display="flex";
+
+botao.style.display = "flex";
+
 }else{
-botao.style.display="none";
+
+botao.style.display = "none";
+
 }
 
 });
